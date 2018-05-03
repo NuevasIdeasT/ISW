@@ -6,6 +6,9 @@ el ingreso a las actividades se limitara al tipo de membresia
 -Solo se permite la entrada a personas con buena salud fisica
 -Se pueden tener diferentes tipos de membresia por persona pero no el mismo tipo con la misma persona(DOS MEBRESIAS FAMILIARES O DOS CORPORATIVAS)
 -No se permite el acceso a personas con mas de un mes de retrazo en su pago.
+propuesta-0.3
+
+La secretaria no podra modificar ningun dato sensible
 -Las formas de pago son en efectivo y con tarjeta a escepcion de AMEX, se puede pagar en linea, presencial y por telefono.
 -Se hara un inventario de aparatos para corroborar su estado y permanencia en los clubes.
 -Al dar de baja un usuario no se borrar de los datos de la empresa, solo 
@@ -21,4 +24,3 @@ el ingreso a las actividades se limitara al tipo de membresia
 -Se cobra extra por servicios de toalla y lavanderia.
 -Se genera un cobro extra en las  membresia por acceder a nuestro servicio de nitrición.
 -Nuestro servicio de estacionamiento es sin costo solo para usuarios con membresia.
-
