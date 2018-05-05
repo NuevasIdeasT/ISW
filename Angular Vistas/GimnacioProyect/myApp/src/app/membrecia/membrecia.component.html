@@ -1,0 +1,144 @@
+<nav id="navigationbar" >
+  <div class="row">
+    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
+      <div id="brandInit">
+        <a href=" " class="span"></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-9 col-lg-9" style="padding-top: 13px;">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="publicOptions">
+            <ul class="menu">
+              <li>
+                <a>Sucursales</a>
+              </li>
+              <li>
+                <a>Actividades</a>
+              </li>
+              <li>
+                <a>Membresías</a>
+              </li>
+              <li>
+                <a>Horarios</a>
+              </li>
+              <li>
+                <a>Mi Cuenta</a>
+              </li>
+              <li class="onlineshop">
+                <a class="aspecial">Compra en Linea</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="fullheight">
+  <div id="membershipFrame">
+    <div id="membershipTab" class="fitkidz_fx">
+      <ul class="nav nav-tabs wow fadeIn">
+        <li id="individual" role="presentation" class="active">
+          <a href="#" (click)="change(11)">Individual</a>
+        </li>
+        <li id="Familiar" role="presentation" >
+          <a style="color: white;"href="#" (click)="change(22)">FAMILIAR</a>
+        </li>
+        <li id="Coprporativa" role="presentation" >
+          <a href="#" style="color: white;" (click)="change(63)" >CORPORATIVA</a>
+        </li>
+      </ul>
+      <div id="membershipTabContent" class="tab-content slick-initialized slick-slider">
+        <div aria-live="polite" class="slick-list draggable" style="height: 446px;">
+          <div class="slick-track main box" role="listbox">
+            <div class="tdiv tab_body row wow fadeIn slick-slide slick-current slick-active" data-wow-delay="500ms"
+                 data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="membership_description">
+                  <p></p>
+                  <div *ngIf="numero==11">
+                  <h2>
+                    <span style="color:#ed2127">MEMBRESÍA</span>
+                    INDIVIDUAL
+                  </h2>
+                  <h3>Si eres el único que se animó a inscribirse al gimnasio y cumplir sus propósitos esta membresía es para ti.</h3>
+                  <br>
+                  <p >Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles que se acomodan a tus necesidades. Con la Membresía Individual tienes acceso ilimitado a todas las áreas y actividades del club, sin restricción de horarios. </p>
+                  </div>
+                  <div *ngIf="numero==22">
+                    <h2>
+                      <span style="color:#ed2127">MEMBRESÍA</span>
+                      FAMILIAR
+                    </h2>
+                    <h3>Dale un regalo a la salud de tu familia</h3>
+                    <br>
+                    <p >
+                      Combina diversión con el deporte. En Sports World tenemos lo que necesitas para el acondicionamiento físico de toda la familia, desde los más pequeños hasta los más grandes. </p>
+                    <br>
+                    • Puedes inscribir hasta 8 familiares.
+                    <br>
+                    • Los 8 integrantes deben ser únicamente familiares directos del titular.
+                    <br>
+                    • El horario de esta membresía es de tiempo completo (full time).
+                    <br>
+                  </div>
+                  <div *ngIf="numero==63">
+                    <h2>
+                      <span style="color:#ed2127">MEMBRESÍA</span>
+                      CORPORATIVA
+                    </h2>
+                    <h3>Si deseas que tus empleados esten en buena condición y se relajen al realizar actividades fisicas</h3>
+                    <br>
+                    <p >Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles para que tus
+                    empleados puedan asistir en sus tiempos libres y aumenten su productividad.</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer id="footbar">
+  <div class="row no-margin black_row">
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+      <span id="swLogo"></span>
+    </div>
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="footer_tab">
+            <div class="footer_col text-center">
+              <a class="footer_link">Comentarios</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="footer_tab">
+            <div class="footer_col text-center">
+              <a class="footer_link">Contactanos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="footer_tab">
+            <div class="footer_col text-center">
+              <a class="footer_link">Aviso de Privacidad</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="footer_tab">
+            <div class="footer_col text-center">
+              <a class="footer_link">Dudas Frecuentes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
