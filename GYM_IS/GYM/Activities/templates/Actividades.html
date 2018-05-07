@@ -6,14 +6,10 @@
 </head>
 <body>
 Funciona
-{% for ubica in all_Ubica%}
-<h1>{{ubica.Descripcion}}</h1>
-{% endfor%}
-{% for tipos in all_Tipos%}
-<h1>{{tipos.Nombre}}</h1>
-{% endfor%}
-{% for emple in all_Empleados%}
-<h1>{{emple.Nombre}}</h1>
-{% endfor%}
+<form class="form_horizontal" action="{% url 'formu'%}" method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+    {{form.as_p}}
+          <input type="submit">
+      </form>
 </body>
 </html>

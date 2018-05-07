@@ -22,5 +22,20 @@ class Empleados(models.Model):
     Puesto = models.CharField(max_length=50)
     def  __str__(self):
         return '%s %s' % (self.Nombre,self.Puesto)
+class Activity(models.Model):
+    Id= models.AutoField(primary_key=True ,default="123", editable=False)
+    Nombre = models.CharField(max_length=100)
+    Descripcion = models.CharField(max_length=100)
+    Type = models.ForeignKey(Tiposact,on_delete=models.CASCADE,default='123')
+    FechaCreacion = models.IntegerField
+    HoraInicial = models.IntegerField
+    Duracion = models.IntegerField
+    DiasAct = models.CharField(max_length=45)
+    Rangoedad = models.CharField(max_length=45)
+    Cupo = models.IntegerField
+    Ubica = models.ForeignKey(Ubicacion,on_delete=models.CASCADE,default='123')
+    Instructor = models.ForeignKey(Empleados,on_delete=models.CASCADE,default='123')
+    def  __str__(self):
+        return '%s %s ' % (self.Nombre,self.Cupo)
 
 
