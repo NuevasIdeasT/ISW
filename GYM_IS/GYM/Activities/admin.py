@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Activity,Tiposact,Empleados,Ubicacion
+from .models import Tiposact,Empleados,Ubicacion,Activity
 # Register your models here.
 
 
