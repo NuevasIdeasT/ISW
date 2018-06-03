@@ -7,6 +7,7 @@
 <title>SportWorld</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href=" {% static 'cliente/styles.css' %} ">
+<link rel="shortcut icon" href="{% static 'cliente/Images/favicon.png' %}"/>
 </head>
 <body>
 <div class="container">
@@ -28,7 +29,7 @@
           <div class="collapse navbar-collapse" id="navbar-1">
             <ul class="nav navbar-nav">
               <li><a href="#">Sucursales</a></li>
-              <li><a href="#">Actividades</a></li>
+              <li><a href=" {% url  'cursos'%} ">Actividades</a></li>
               <li class="active"><a href="#">Membresías</a></li>
               <li><a href="#">Horarios</a></li>
             </ul>
@@ -75,7 +76,14 @@
           </h2>
           <h3>Si eres el único que se animó a inscribirse al gimnasio y cumplir sus propósitos esta membresía es para ti.</h3>
           <br>
-          <p >Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles que se acomodan a tus necesidades. Con la Membresía Individual tienes acceso ilimitado a todas las áreas y actividades del club, sin restricción de horarios. </p>
+          <p class="lead">Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles que se acomodan a tus necesidades. Con la Membresía Individual tienes acceso ilimitado a todas las áreas y actividades del club, sin restricción de horarios. </p>
+          <div class="row" style="margin-top: 63px;">
+            <div class="col-xs-12 col-md-6">
+              <a class="thumbnail">
+                <img src="{% static 'cliente/Images/individual.jpg' %}"  alt="Individual">
+              </a>
+            </div>
+          </div>
         </div>
         <div id="Familiar" class="tab-pane fade">
           <h2>
@@ -84,15 +92,22 @@
           </h2>
           <h3>Dale un regalo a la salud de tu familia</h3>
           <br>
-          <p >
+          <p class="lead">
             Combina diversión con el deporte. En Sports World tenemos lo que necesitas para el acondicionamiento físico de toda la familia, desde los más pequeños hasta los más grandes. </p>
           <br>
-          • Puedes inscribir hasta 8 familiares.
+          <ul class="lead">
+            <li>Puedes inscribir hasta 8 familiares.</li>
+            <li>Los 8 integrantes deben ser únicamente familiares directos del titular</li>
+            <li>El horario de esta membresía es de tiempo completo (full time).</li>
+          </ul>
           <br>
-          • Los 8 integrantes deben ser únicamente familiares directos del titular.
-          <br>
-          • El horario de esta membresía es de tiempo completo (full time).
-          <br>
+          <div class="row" style="margin-top: 63px;">
+            <div class="col-xs-12 col-md-6">
+              <a class="thumbnail">
+                <img src="{% static 'cliente/Images/familiar.jpg' %}"  alt="Familiar">
+              </a>
+            </div>
+          </div>
         </div>
         <div id="Corporativa" class="tab-pane fade">
           <h2>
@@ -101,8 +116,15 @@
           </h2>
           <h3>Si deseas que tus empleados esten en buena condición y se relajen al realizar actividades fisicas</h3>
           <br>
-          <p >Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles para que tus
+          <p class="lead">Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles para que tus
           empleados puedan asistir en sus tiempos libres y aumenten su productividad.</p>
+          <div class="row" style="margin-top: 63px;">
+            <div class="col-xs-12 col-md-6">
+              <a class="thumbnail">
+                <img src="{% static 'cliente/Images/corporativa.jpg' %}"  alt="Corporativa">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

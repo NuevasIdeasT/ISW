@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href=" {% static 'cliente/styles.css' %} ">
 <!-- Custom styles for this template -->
 <link rel="stylesheet" type="text/css" href=" {% static 'cliente/modern-business.css' %} ">
+<link rel="shortcut icon" href="{% static 'cliente/Images/favicon.png' %}"/>
 </head>
 <body>
   <nav  class="navbar navbar-default navbar-fixed-top">
@@ -28,7 +29,7 @@
       <div class="collapse navbar-collapse" id="navbar-1">
         <ul class="nav navbar-nav">
           <li><a href="#">Sucursales</a></li>
-          <li><a href="#">Actividades</a></li>
+          <li><a href=" {% url  'cursos'%} ">Actividades</a></li>
           <li><a href=" {% url  'membresias'%} ">Membresías</a></li>
           <li><a href="#">Horarios</a></li>
         </ul>
@@ -108,7 +109,6 @@
               <div class="caption">
                 <h3>Thumbnail label</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, esse!</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
               </div>
             </div>
           </div>
@@ -119,7 +119,6 @@
               <div class="caption">
                 <h3>Thumbnail label</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, esse!</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
               </div>
             </div>
           </div>
@@ -130,7 +129,6 @@
               <div class="caption">
                 <h3>Thumbnail label</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, esse!</p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
               </div>
             </div>
           </div>
