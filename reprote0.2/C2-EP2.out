@@ -1,0 +1,23 @@
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Presentaci\363n}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Organizaci\363n del contenido}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Notaci\363n, s\355mbolos y convenciones utilizadas}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Modelo del Alcance}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Modelado de Usuarios}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{Organigrama de la Empresa}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{Jefe de Inmobiliario}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{Requerimientos de usuario}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Especificaci\363n de plataforma}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{Modelo del Negocio}{}% 11
+\BOOKMARK [1][-]{section.3.1}{Contexto}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.2}{T\351rminos del Negocio}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.3}{Modelo del dominio del problema}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.1}{Modelo del dominio del problema}{section.3.3}% 15
+\BOOKMARK [2][-]{subsection.3.3.2}{Entidad: Alumno}{section.3.3}% 16
+\BOOKMARK [2][-]{subsection.3.3.3}{Entidad: Alumno Extranjero}{section.3.3}% 17
+\BOOKMARK [1][-]{section.3.4}{Modelado de Reglas de negocio}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.5}{Modelo de Procesos AS-IS}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.5.1}{PROC-01 An\341lisis de requerimientos}{section.3.5}% 20
+\BOOKMARK [2][-]{subsection.3.5.2}{PROC-02 ...}{section.3.5}% 21
+\BOOKMARK [1][-]{section.3.6}{Modelo de procesos TO-BE}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.6.1}{PROCM-01 ...}{section.3.6}% 23
