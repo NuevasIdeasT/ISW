@@ -15,7 +15,7 @@
       <nav  class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a href=" {% url  'index'%} " class="navbar-brand">
+            <a href=" {% url  'cliente:index'%} " class="navbar-brand">
               <img src=" {% static 'cliente/Images/logo.svg' %}" alt="Brand"/>
             </a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
@@ -29,13 +29,13 @@
           <div class="collapse navbar-collapse" id="navbar-1">
             <ul class="nav navbar-nav">
               <li><a href="#">Sucursales</a></li>
-              <li class="active"><a href="#">Actividades</a></li>
-              <li><a href=" {% url  'membresias'%} ">Membresías</a></li>
+              <li class="active"><a href="">Actividades</a></li>
+              <li><a href=" {% url  'cliente:membresias'%} ">Membresías</a></li>
               <li><a href="#">Horarios</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="{% url 'login' %}">Login</a>
+              <li><a href="{% url 'cliente:login' %}">Login</a>
               <!--<li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                   Miguel Fernández <span class="caret"></span>
