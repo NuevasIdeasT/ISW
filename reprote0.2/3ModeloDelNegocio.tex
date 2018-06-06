@@ -48,8 +48,16 @@
 	
 \begin{figure}[htbp!]
 	\begin{center}
-		\includegraphics[angle=90,width=.95\textwidth]{images/modeloDelDominioDelProblema}
-		\caption{Modelo del dominio del problema}
+		\includegraphics[angle=90,width=.95\textwidth]{images/modeloDelDominioDelProblema1}
+		\caption{Modelo del dominio del problema parte 1}
+		\label{fig:modeloDeDominio}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[angle=90,width=.95\textwidth]{images/modeloDelDominioDelProblema2}
+		\caption{Modelo del dominio del problema parte 1}
 		\label{fig:modeloDeDominio}
 	\end{center}
 \end{figure}
@@ -64,15 +72,15 @@
 	\vspace{-25pt}%
 	\subsection{Entidad: #2}%
 	\noindent\begin{longtable}{|p{.2\textwidth}| p{.15\textwidth} | p{.46\textwidth} |p{.08\textwidth} |}%
-	\hline%
-	\multicolumn{4}{|c|}{{\cellcolor{colorSecundario}\color{white}Atributos}}\\ \hline%
-	{\cellcolor{colorAgua}Nombre} &%
-	{\cellcolor{colorAgua}Tipo} &%
-	{\cellcolor{colorAgua}Descripción} &%
-	{\cellcolor{colorAgua}Requerido}%
-	\\ \hline%
-	\endhead%
-}{%
+		\hline%
+		\multicolumn{4}{|c|}{{\cellcolor{colorSecundario}\color{white}Atributos}}\\ \hline%
+		{\cellcolor{colorAgua}Nombre} &%
+		{\cellcolor{colorAgua}Tipo} &%
+		{\cellcolor{colorAgua}Descripción} &%
+		{\cellcolor{colorAgua}Requerido}%
+		\\ \hline%
+		\endhead%
+	}{%
 	\end{longtable}%
 }
 
@@ -96,42 +104,154 @@
 	{\em{#1}} & {\bf{#2}} & \multicolumn{2}{|l|}{#3}\\\hline
 }
 
-
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-\begin{cdtEntidad}{Alumno}{Alumno}
-	\brAttr{registro}{Registro}{Id}{Número de registro utilizado para identificar un alumno}{Sí}
-	\brAttr{nombre}{Nombre}{Palabra Corta}
-		{Nombre o nombres del alumno.}{Sí}
-	\brAttr{primerApellido}{Primer apellido}{Palabra Corta}
-		{Primer apellido del alumno.}{Sí}
-	\brAttr{segundoApellido}{Segundo apellido}{Palabra Corta}
-		{Segundo apellido del alumno.}{No}
-	\brAttr{CURP}{CURP}{CURP}
-		{CURP del alumno.}{Sí}
+
+\begin{cdtEntidad}{Cliente}{Cliente}
+	\brAttr{Cliente}{Cliente}{Id}{Número de registro para identificar al cliente.}{Sí}
+	\brAttr{nombre}{Nombre}{Palabra larga}
+	{Nombrecompleto del cliente.}{Sí}
+	\brAttr{Domicilio}{Domicilio}{Palabra }
+	{Domicilio del cliente.}{Sí}
+	\brAttr{Correo}{Correo}{Correo}{Correo del cliente para envio de circulares o avisos.}{No}
+	\brAttr{Telefono}{Telefono}{Telefono}{Telefono de contacto del cliente}{No}
+	\brAttr{NumeroEmergencia}{Numero de emergencia}{Telefono}
+	{Telefono de contcto en caso de alguna emergencia.}{Sí}
 	\brAttr{nacimiento}{Nacimiento}{Fecha}
-		{Fecha de nacimiento del alumno.}{Sí}
-	\brAttr{genero}{Género}{Domicilio}
-		{Género del alumno.}{No}
-	\brAttr{telefono}{Teléfono}{Telefono}
-		{Teléfono para contactar al alumno.}{Sí}
-	\brAttr{correo}{Correo}{Correo}
-		{Correo del alumno para enviar información académica y escolar y para recuperación de clave de acceso.}{Sí}
+	{Fecha de nacimiento del cliente.}{Sí}
+	\brAttr{Estatura}{Estatura}{Flotante}{Estatura del cliente}{NO}
+	\brAttr{Peso}{Peso}{Flotante}
+	{Peso del cliente.}{NO}
+	\brAttr{Alergias}{Alergias}{Booleano}
+	{Si el cliente cuenta con alguna alergia.}{Sí}	
+	\brAttr{Enfermedades}{Enfermedades}{Booleano}
+	{Si el cliente cuenta con alguna enfermedad crónica.}{SI}
+	\brAttr{Medicación}{Medicación}{Booleano}
+	{Si el cliente cuenta con medicación.}{SI}
+	\brAttr{sucursal}{sucursal}{ID}{Numero de registro para identificar la sucursal a la que pertenece}{SI}
+	\brAttr{ID_Membresia}{Membresía}{ID}
+	{Numero de registro para identificar la membresia qye tiene el cliente.}{SI}
+	\brAttr{Nombre}{Usuario}{Nombre de y usuario}{Nombre de usuario para iniciar sesion}{SI}
+	
 	\cdtEntityRelSection
-	\brRel{\brRelComposition}{Domicilio}{Un \hyperlink{Alumno}{Alumno} reside en un \hyperlink{Domicilio}{Domicilio}}	
-	\brRel{\brRelAgregation}{Grupo}{Un \hyperlink{Alumno}{Alumno} toma un \hyperlink{Curso}{Curso}}	
+	\brRel{\brRelGeneralization}{Empleado}{Un \hyperlink{Gerente}{Gerente} es un \hyperlink{Empleado}{Empleado}}	
+\end{cdtEntidad}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+\begin{cdtEntidad}{Gerente}{Gerente}
+	\brAttr{Empleado}{Empleado}{Id}{Número de registro para identificar al empleado.}{Sí}
+	\brAttr{Antigedad}{Antigedd}{Entero Corto}
+	{Antigedad en la Sucursal.}{Sí}
+	\brAttr{Domicilio}{Domicilio}{Palabra }
+	{Domicilio del cliente.}{Sí}
+	
+	
+	\cdtEntityRelSection
+	\brRel{\brRelComposition}{Sucursal}{Un \hyperlink{Cliente}{Cliente} pertenece a una \hyperlink{Sucursal}{Sucursal}}	
+	\brRel{\brRelAgregation}{Membresía}{Un \hyperlink{Cliente}{Cliente} tiene una \hyperlink{Membresia}{Membresia}}	
+\end{cdtEntidad}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+\begin{cdtEntidad}{Instructor}{Instructor}
+	\brAttr{Empleado}{ID}{Id}{Número de registro para identificar al empleado.}{Sí}
+	\brAttr{Nivel}{Nombre}{entero corto}
+	{Nivel en el que se encuentra en la sucurusal.}{Sí}
+	
+	
+	\cdtEntityRelSection
+	\brRel{\brRelGeneralization}{Empleado}{Un \hyperlink{Instructor}{Instructor} es un \hyperlink{Empleado}{Empleado}}	
 \end{cdtEntidad}
 
+
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-\begin{cdtEntidad}{AlumnoExtranjero}{Alumno Extranjero}%{}
-	\brAttr{numeroResidente}{Numero de residente}{Id}{Número de registro dado por la Secretaría de Relaciones Exteriores a los extranjeros.}{Si}
-	\brAttr{paisOrigen}{Pais origen}{\hyperlink{Pais}{País}}
-		{País de origen del alumno extranjero.}{Sí}
+
+\begin{cdtEntidad}{Recepcionista}{Recepcionista}
+	\brAttr{Empleado}{ID}{Id}{Número de registro para identificar al empleado.}{Sí}
+	\brAttr{Especialidad}{Especialidad}{Nombre corto}
+	{Especialidad de la recepcionista en alguna área.}{Sí}
+	
+	
 	\cdtEntityRelSection
-	\brRel{\brRelAgregation}{País}{Un \hyperlink{Alumno}{Alumno} es originario de un \hyperlink{Pais}{Pais}}	
-	\brRel{\brRelGeneralization}{Alumno}{Un \hyperlink{AlumnoExtranjero}{Alumno Extranjero} es un  \hyperlink{Alumno}{Alumno}}	
+	\brRel{\brRelGeneralization}{Empleado}{Un \hyperlink{Recepcionista}{Recepcionista} es un \hyperlink{Empleado}{Empleado}}	
+\end{cdtEntidad}
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\begin{cdtEntidad}{Vendedor}{Vendedor}
+	\brAttr{Empleado}{ID}{Id}{Número de registro para identificar al empleado.}{Sí}
+	\brAttr{Membresias}{Venta}{entero corto}
+	{Numero de membresias vendidas desde su ingreso.}{NO}
+	
+	
+	\cdtEntityRelSection
+	\brRel{\brRelGeneralization}{Empleado}{Un \hyperlink{Recepcionista}{Recepcionista} es un \hyperlink{Empleado}{Empleado}}	
+\end{cdtEntidad}
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\begin{cdtEntidad}{Sucursal}{Sucursal}
+	\brAttr{Sucursal}{Sucursal}{Id}{Número de registro para identificar una sucursal.}{Sí}
+	\brAttr{nombre}{Nombre}{Palabra corta}
+	{Nombrecompleto de la sucursal.}{Sí}
+	\brAttr{Domicilio}{Domicilio}{Palabra larga}
+	{Domicilio de la sucursal.}{Sí}
+	\brAttr{Telefono}{Telefono}{Telefono}{Telefono de contacto para la sucursal}{SI}
+	\brAttr{Hora}{Apertura}{hora}{Hora en la que empieza a dar servicio la sucursal}{SI}
+	\brAttr{Hora}{Cierre}{hora}
+	{hora en la que se termina el sevicio en la sucursal.}{SI}
+	
+\end{cdtEntidad}
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+\begin{cdtEntidad}{Venta}{Venta}
+	\brAttr{ID}{Venta}{Id}{Número de registro para identificar la venta.}{Sí}
+	\brAttr{Fecha}{Fecha}{fecha}
+	{Fecha en la que se realizo la venta.}{Sí}
+	\brAttr{Monto}{Monto}{Flotante }
+	{Monto de la venta.}{Sí}
+	\brAttr{ID}{Empleado}{ID}{Numero de registro para identificar el empleado que vendio la membresia}{si}
+	
+	
+	\cdtEntityRelSection
+	\brRel{\brRelComposition}{Vendedor}{Una \hyperlink{Venta}{Venta} tiene un \hyperlink{Vendedor}{Vendedor} que realizó la venta}	
+	\brRel{\brRelComposition}{Membresía}{Una \hyperlink{Venta}{Venta} tiene una \hyperlink{Membresia}{Membresia} asignada}
+	\brRel{\brRelComposition}{Cliente}{Ua \hyperlink{Venta}{Venta} tiene un \hyperlink{Cliente}{Cliente} que la solicitó}	
+\end{cdtEntidad}
+%---------------------------------------------------------
+
+	\begin{cdtEntidad}{Actividad}{Actividad}
+	\brAttr{ID}{Actividad}{Id}{Número de registro para identificar la Actividad.}{Sí}
+	\brAttr{Nombre}{Nombre}{Nombre corto}
+	{Nombre de la actividad.}{Sí}
+	\brAttr{Descripcion}{Descripcion}{Nombre largo}
+	{Descripcion de la actividad.}{Sí}
+	\brAttr{Fecha}{Creacion}{fecha}{Fecha en la que se creo la Actividad}{SI}
+	\brAttr{Cupo}{Cupo}{Entero}{Cupo máximo de la actividad}{SI}
+	\brAttr{ID}{Area}{ID}{Numero de registro para identificar el area a la que pertenece la actividad}{SI}
+	\brAttr{ID}{Actividad}{ID}{Numero de registro para identificar el tipo de actividad}{SI}
+	
+	\cdtEntityRelSection
+	\brRel{\brRelComposition}{Area}{Una \hyperlink{Actividad}{Actividad} tiene un \hyperlink{Area}{Area} asignada}	
+	\brRel{\brRelComposition}{TipoActividad}{Una \hyperlink{Actividad}{Actividad} tiene un \hyperlink{TipoActividad}{TipoActividad}}	
 \end{cdtEntidad}
 
 %---------------------------------------------------------
+
+\begin{cdtEntidad}{Area}{Area}
+	\brAttr{ID}{Area}{Id}{Número de registro para identificar un area.}{Sí}
+	\brAttr{Nombre}{Nombre}{Nombre corto}
+	{Nombre del area.}{Sí}
+	\brAttr{Descripcion}{Descripcion}{Nombre largo}
+	{Descripcion del area.}{Sí}
+	\brAttr{ID}{Empleado}{ID}{Numero de registro para identificar al encargado de área}{SI}
+	\brAttr{ID}{Sucursal}{ID}{Numero de registro para identificar la sucursal a la que pertenece}{SI}
+	\brAttr{Capacidad}{Capacidad}{Numerico}{Numero de personas que pueden estar en el area}{SI}
+	\brAttr{Dimensiones}{Dimensiones}{Nombre corto}{Metros de largo por metros de ancho}{SI}
+	\cdtEntityRelSection
+	\brRel{\brRelAgregation}{Encargado}{Un \hyperlink{Area}{Area} tiene un \hyperlink{Encargado}{Encargado} asignada}	
+	\brRel{\brRelComposition}{Sucursal}{Un \hyperlink{Area}{Area} pertenece a una \hyperlink{Sucursal}{Sucursal}}	
+	\end{cdtEntidad}
+	
+	%---------------------------------------------------------
 \section{Modelado de Reglas de negocio}
 
 \input{3-1-reglas}
@@ -141,8 +261,8 @@
 
 En esta sección se describen los procesos a mejorar con el sistema.
 
-\input{proc/proc01.tex}
-\input{proc/proc02.tex}
+%%%%\input{proc/proc01.tex}
+%%%%\input{proc/proc02.tex}
 %\input{proc/proc03.tex}
 %\input{proc/proc04.tex}
 
