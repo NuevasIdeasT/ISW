@@ -3,6 +3,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse_lazy
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
+from .models import (
+    Cliente,
+    Sucursal,
+    Membresia
+)
 
 def index(request):
     """View que muestra la pagina principal"""
@@ -24,7 +29,7 @@ def Inicio(request):
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password)
-    print user.get_full_name()
+    cliente = Cliente.objects.get_object_or_404(nombre=user.first_name)
     if user is not None:
         # Correct password, and the user is marked "active"
         login(request, user)
