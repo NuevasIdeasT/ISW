@@ -287,5 +287,24 @@ footer#footBar {
   background-repeat: no-repeat;
   margin: 10px;
 }
+/*para poner texto sobre una imagen*/
+.contenedor{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+ 
+.texto-encima a{
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  text-decoration:none;
+}
+.centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 

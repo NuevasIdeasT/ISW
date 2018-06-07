@@ -1,146 +1,122 @@
+{% load staticfiles %}
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>MyApp</title>
+  <title>SportWorld</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'cliente/styles.css' %} ">
+  <link rel="shortcut icon" href="{% static 'cliente/Images/favicon.png' %}"/>
 </head>
 <body>
-<nav id="navigationbar" >
-  <div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3">
-      <div id="brandInit">
-        <a href=" " class="span"></a>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-9 col-lg-9" style="padding-top: 13px;">
-      <div class="row">
-        <div class="col-xs-12">
-          <div id="publicOptions">
-            <ul class="menu">
-              <li>
-                <a>Sucursales</a>
-              </li>
-              <li>
-                <a>Actividades</a>
-              </li>
-              <li>
-                <a>Membresías</a>
-              </li>
-              <li>
-                <a>Horarios</a>
-              </li>
-              <li>
-                <a>Mi Cuenta</a>
-              </li>
-              <li class="onlineshop">
-                <a class="aspecial">Compra en Linea</a>
-              </li>
+<div id="container">
+  <header>
+      <nav  class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href=" {% url  'cliente:index'%} " class="navbar-brand">
+              <img src=" {% static 'cliente/Images/logo.svg' %}" alt="Brand"/>
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+              <span class="sr-only">Menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Sucursales</a></li>
+              <li class="active"><a href="">Actividades</a></li>
+              <li><a href=" {% url  'cliente:membresias'%} ">Membresías</a></li>
+              <li><a href="#">Horarios</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{% url 'cliente:login' %}">Login</a>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                  Miguel Fernández <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Mi Cuenta</a></li>
+                  <li><a href="#">Mis Cursos</a></li>
+                  <li><a href="#">Mis instructores</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Cerrar sesión</a></li>
+                </ul>
+              </li>-->
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</nav>
-<div id="programFirstStage">
-  <div id="ProgramGrid" class="container">
-    <h3 class="uppercase text-center wow fadeInRight">CURSOS</h3>
+      </nav>
+    </header>
+  <div class="container">
+    <h1 class="text-center ">CURSOS</h1>
     <div class="row">
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external">
-          <div class="program_data">
-            <a href="cursos.component.html" class="cssone">
-              <p class="program_name" style="line-height: 1.5em;">AEROYOGA</p>
-
-              <p class="auto">Es un servicio de entrenamiento en suspensión y en grupo, que unifica los beneficios de Pilates, Yoga y danza aérea.</p>
-            </a>
-          </div>
-        </div>
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/aero-yoga.jpg' %}" alt="Aeroyoga">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">AEROYOGA</p>
+          <p class="text-justify">Es un servicio de entrenamiento en suspensión y en grupo, que unifica los beneficios de Pilates, Yoga y danza aérea.</p>
       </div>
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external1" >
-          <div class="program_data">
-            <a href="cursos.component.html" class="cssone">
-              <p class="program_name" style="line-height: 1.5em;">hip-hop</p>
-
-              <p class="auto">Aprende a bailar como un profesional de HIP HOP, con nuestros mejores instructores</p>
-            </a>
-          </div>
-        </div>
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/HIpHop.jpg' %}" alt="Hip-Hop">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">HIP-HOP</p>
+          <p class="text-justify">Aprende a bailar como un profesional de HIP HOP, con nuestros mejores instructores</p>
       </div>
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external2">
-          <div class="program_data">
-            <a href="cursos.component.html" class="cssone">
-              <p class="program_name" style="line-height: 1.5em;">Pilates</p>
-
-              <p class="auto">Desestrezate con esta magnifica disciplina de paz.</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external3">
-          <div class="program_data">
-            <a href="cursos.component.html" class="cssone">
-              <p class="program_name" style="line-height: 1.5em;">Body Balance</p>
-
-              <p class="auto">Programa de Acondicionamiento Coporal</p>
-            </a>
-          </div>
-        </div>
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/pilates.jpg' %}" alt="Pilates">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">PILATES</p>
+          <p class="text-justify">Desestrezate con esta magnifica disciplina de paz.</p>
       </div>
     </div>
     <div class="row" style="margin-top: 63px;">
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external4">
-          <div class="program_data">
-            <a href="cursos.component.html" class="cssone">
-              <p class="program_name" style="line-height: 1.5em;">Kick Boxing</p>
-
-              <p class="auto">Practica este deporte de contacto personal y vuelvete un profesional.</p>
-            </a>
-          </div>
-        </div>
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/BodyBalance.jpg' %}" alt="Aeroyoga">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">BODY BALANCE</p>
+          <p class="text-justify">Programa de Acondicionamiento Coporal.</p>
       </div>
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external5">
-          <div class="program_data">
-            <a href="cursos.component.html" class="cssone">
-              <p class="program_name" style="line-height: 1.5em;">RPM</p>
-
-              <p class="auto">Fabuloso programa de ciclismo grupal para reducir calorias.</p>
-            </a>
-          </div>
-        </div>
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/Kickboxing.png' %}" alt="Aeroyoga">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">Kick Boxing</p>
+          <p class="text-justify">Practica este deporte de contacto personal y vuelvete un profesional.</p>
       </div>
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external6">
-          <div class="program_data">
-            <a href="cursos.component.html" class="cssone">
-              <p class="program_name" style="line-height: 1.5em;">TAEKWONDO</p>
-
-              <p class="auto">Aprende tecnicas de defenza personal con este extraordinario curso.</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="  q-2   at-3   ob-1  ob-1 elemento col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        <div class="progam_item external7">
-          <div class="program_data">
-            <a href="cursos.component.html" class="Zumba">
-              <p class="program_name" style="line-height: 1.5em;">AEROYOGA</p>
-
-              <p class="auto">Muevete al ritmo de la musica mientras tonificas tu cuerpo.</p>
-            </a>
-          </div>
-        </div>
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/spinning.jpg' %}" alt="Aeroyoga">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">RPM</p>
+          <p class="text-justify">Fabuloso programa de ciclismo grupal para reducir calorias.</p>
       </div>
     </div>
-
+    <div class="row" style="margin-top: 63px;">
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/Taekwondo.jpg' %}" alt="Taekwondo">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">TAEKWONDO</p>
+          <p class="text-justify">Aprende tecnicas de defenza personal con este extraordinario curso.</p>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <a href="#" class="thumbnail">
+          <img src="{% static 'cliente/Images/natacion.jpg' %}" alt="Natación">
+        </a>
+          <p style="line-height: 1.5em;font-size: 1.5em;">NATACIÓN</p>
+          <p class="text-justify">Aprende a nadar o perfecciona tus habilidades con nosotros, tenemos los mejores entrendadores.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -173,3 +149,13 @@ crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
+<!-- 
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="..." alt="...">
+    </a>
+  </div>
+  ...
+</div>
+-->
