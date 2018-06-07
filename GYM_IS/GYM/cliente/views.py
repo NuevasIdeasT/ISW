@@ -24,7 +24,7 @@ def Inicio(request):
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password)
-    print user
+    print user.get_full_name()
     if user is not None:
         # Correct password, and the user is marked "active"
         login(request, user)
