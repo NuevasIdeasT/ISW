@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Presentaci\IeC {\'o}n}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Organizaci\IeC {\'o}n del contenido}{1}{section.1.2}
@@ -54,5 +54,21 @@
 \contentsline {subsection}{\numberline {4.6.2}Atributos importantes}{32}{subsection.4.6.2}
 \contentsline {subsection}{\numberline {4.6.3}Trayectorias del Caso de Uso}{32}{subsection.4.6.3}
 \contentsline {subsection}{\numberline {4.6.4}Puntos de extensi\IeC {\'o}n}{33}{subsection.4.6.4}
-\contentsline {section}{\numberline {4.7}Gui\IeC {\'o}n de Pruebas}{33}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Gui\IeC {\'o}n de prueba 1}{33}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.7}CU22 Iniciar sesi\IeC {\'o}n cliente gimnasio}{34}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Descripci\IeC {\'o}n completa}{34}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Atributos importantes}{34}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Trayectorias del Caso de Uso}{34}{subsection.4.7.3}
+\contentsline {section}{\numberline {4.8}CU17 Consultar instructores de actividades.}{36}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Descripci\IeC {\'o}n completa}{36}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Atributos importantes}{36}{subsection.4.8.2}
+\contentsline {subsection}{\numberline {4.8.3}Trayectorias del Caso de Uso}{36}{subsection.4.8.3}
+\contentsline {section}{\numberline {4.9}CU23 Inscribir actividad}{37}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Descripci\IeC {\'o}n completa}{37}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Atributos importantes}{37}{subsection.4.9.2}
+\contentsline {subsection}{\numberline {4.9.3}Trayectorias del Caso de Uso}{37}{subsection.4.9.3}
+\contentsline {section}{\numberline {4.10}CU25 Calificar Actividad.}{38}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Descripci\IeC {\'o}n completa}{38}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Atributos importantes}{38}{subsection.4.10.2}
+\contentsline {subsection}{\numberline {4.10.3}Trayectorias del Caso de Uso}{38}{subsection.4.10.3}
+\contentsline {section}{\numberline {4.11}Gui\IeC {\'o}n de Pruebas}{39}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Gui\IeC {\'o}n de prueba 1}{39}{subsection.4.11.1}

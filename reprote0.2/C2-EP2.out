@@ -53,5 +53,21 @@
 \BOOKMARK [2][-]{subsection.4.6.2}{Atributos importantes}{section.4.6}% 53
 \BOOKMARK [2][-]{subsection.4.6.3}{Trayectorias del Caso de Uso}{section.4.6}% 54
 \BOOKMARK [2][-]{subsection.4.6.4}{Puntos de extensi\363n}{section.4.6}% 55
-\BOOKMARK [1][-]{section.4.7}{Gui\363n de Pruebas}{chapter.4}% 56
-\BOOKMARK [2][-]{subsection.4.7.1}{Gui\363n de prueba 1}{section.4.7}% 57
+\BOOKMARK [1][-]{section.4.7}{CU22 Iniciar sesi\363n cliente gimnasio}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.7.1}{Descripci\363n completa}{section.4.7}% 57
+\BOOKMARK [2][-]{subsection.4.7.2}{Atributos importantes}{section.4.7}% 58
+\BOOKMARK [2][-]{subsection.4.7.3}{Trayectorias del Caso de Uso}{section.4.7}% 59
+\BOOKMARK [1][-]{section.4.8}{CU17 Consultar instructores de actividades.}{chapter.4}% 60
+\BOOKMARK [2][-]{subsection.4.8.1}{Descripci\363n completa}{section.4.8}% 61
+\BOOKMARK [2][-]{subsection.4.8.2}{Atributos importantes}{section.4.8}% 62
+\BOOKMARK [2][-]{subsection.4.8.3}{Trayectorias del Caso de Uso}{section.4.8}% 63
+\BOOKMARK [1][-]{section.4.9}{CU23 Inscribir actividad}{chapter.4}% 64
+\BOOKMARK [2][-]{subsection.4.9.1}{Descripci\363n completa}{section.4.9}% 65
+\BOOKMARK [2][-]{subsection.4.9.2}{Atributos importantes}{section.4.9}% 66
+\BOOKMARK [2][-]{subsection.4.9.3}{Trayectorias del Caso de Uso}{section.4.9}% 67
+\BOOKMARK [1][-]{section.4.10}{CU25 Calificar Actividad.}{chapter.4}% 68
+\BOOKMARK [2][-]{subsection.4.10.1}{Descripci\363n completa}{section.4.10}% 69
+\BOOKMARK [2][-]{subsection.4.10.2}{Atributos importantes}{section.4.10}% 70
+\BOOKMARK [2][-]{subsection.4.10.3}{Trayectorias del Caso de Uso}{section.4.10}% 71
+\BOOKMARK [1][-]{section.4.11}{Gui\363n de Pruebas}{chapter.4}% 72
+\BOOKMARK [2][-]{subsection.4.11.1}{Gui\363n de prueba 1}{section.4.11}% 73
