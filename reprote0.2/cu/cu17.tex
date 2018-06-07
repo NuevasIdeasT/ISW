@@ -11,6 +11,7 @@
 %\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
 %--------------------------------------
 	\begin{UseCase}{CU1}{Iniciar sesión de jefe de inmobiliario}{
+	
 		Validar al jefe de inmobiliario para que pueda tener acceso a la información de la sucursal.
 	}
 		\UCitem{Versión}{\color{Gray}0.4}
@@ -222,7 +223,7 @@
 
 %\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
 %--------------------------------------
-\begin{UseCase}{CU4}{Agregar actividad a la sucursal}{
+\begin{UseCase}{CU5}{Agregar actividad a la sucursal}{
 		El Jefe de inmobiliario podrá agregar una nueva actividad al sistema.
 	}
 	\UCitem{Versión}{\color{Gray}0.4}
@@ -257,7 +258,7 @@
 
 %--------------------------------------
 \begin{UCtrayectoriaA}{B}{Contraseña incorrecta}
-	\UCpaso Muestra el Mensaje {\bf MSG1¿2-}``El password no es correcto.''.
+	\UCpaso Muestra el Mensaje {\bf MSG12-}``El password no es correcto.''.
 	\UCpaso[\UCactor] Introduce password correcto.
 	\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
 \end{UCtrayectoriaA}

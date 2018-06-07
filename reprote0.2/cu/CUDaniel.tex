@@ -50,8 +50,8 @@
 		Permite  al cliente del gimnasio autenticarse en el sistema mediante correo y su contraseña para poder ingresar a su cuenta.
 	}
 		\UCitem{Versión}{\color{Gray}0.2}
-		\UCitem{Autor}{\color{Gray}Jazmin.}
-		\UCitem{Supervisa}{\color{Gray}Paco.}
+		\UCitem{Autor}{\color{Gray}Daniel.}
+		\UCitem{Supervisa}{\color{Gray}Luis.}
 		\UCitem{Actor}{\hyperlink{Cliente}{Cliente}}
 		\UCitem{Propósito}{Que el cliente pueda pueda acceder a su información, actividades que tiene inscritas o para poder inscribir alguna y ver sus instructores.}
 		\UCitem{Entradas}{Correo electrónico, contraseña}
@@ -76,26 +76,7 @@
 	\end{UCtrayectoria}
 
 %--------------------------------------		
-		\begin{UCtrayectoriaA}{A}{El cliente olvide su membresía}
-			\UCpaso[\UCactor] Captura el correo electrónico del cliente y su nombre completo.% {\bf MSG1-}``El Estudiante [{\em Número de Boleta}] aun no puede inscribirse al seminario.''.
-			\UCpaso[\UCactor] Confirma la operación oprimiendo el botón de buscar.% \IUbutton{Aceptar}.
-			\UCpaso Continua en el paso \ref{CU15ValidarQR} del \UCref{CU15}.
-		\end{UCtrayectoriaA}
-		
-%--------------------------------------
-		\begin{UCtrayectoriaA}{B}{El cliente tiene menos de una semana sin pagar}
-			\UCpaso Muestra mensaje de Realizar pronto pago, permitir entrada.
-			\UCpaso[\UCactor] Oprime el botón de aceptar.% \IUbutton{Salir}.
-			\UCpaso Muestra mensaje: ¿Quiere realizar el pago?.
-			\UCpaso[\UCactor] Toma una desición.
-			\UCpaso[] termina caso de uso.
-		\end{UCtrayectoriaA}
 
-%--------------------------------------
-		\begin{UCtrayectoriaA}{C}{El cliente tenga mas de una semana sin pagar}
-			\UCpaso Muestra mensaje de no permitir entrada.%{\bf MSG2-}``El Estudiante [{ Número de Boleta}] no cumple con los requisitos para inscribirse al Seminario [{\em Nombre del Seminario seleccionado}].''.
-			\UCpaso[\UCactor] Continua con el paso \ref{CU15RealizarPago} de la trayectoria B.
-		\end{UCtrayectoriaA}
 
 %--------------------------------------
 % Puntos de extensión
@@ -160,8 +141,8 @@
 		El cliente selecciona una puntuación para la actividad en un intervalo del 1 al 5 y se quedara guardada.
 	}
 	\UCitem{Versión}{\color{Gray}0.1}
-	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martinez}
-	\UCitem{Supervisa}{\color{Gray}}
+	\UCitem{Autor}{\color{Gray}Daniel}
+	\UCitem{Supervisa}{\color{Gray}Luis}
 	\UCitem{Actor}{\hyperlink{Cliente}{Cliente}}
 	\UCitem{Propósito}{ Que el cliente pueda transmitir una retro alimentación para el gimnasio y que pueda tener un mejor servicio. }
 	\UCitem{Entradas}{Nombre Actividad, Calificación, Comentario }
@@ -187,11 +168,6 @@
 	
 \end{UCtrayectoria}
 
-\begin{UCtrayectoriaA}{A}{No haya cupo en Actividad}
-	\UCpaso Captura la actividad que el cliente quiere.
-	\UCpaso[\UCactor] Manda mensaje de sin cupo.
-	\UCpaso Confirma de enterado oprimiendo el botón de aceptar.
-	\end{UCtrayectoriaA}
 %-------------------------------------- TERMINA descripción del caso de uso.
 
 

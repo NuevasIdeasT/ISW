@@ -11,9 +11,18 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama detallado del sistema parte 1.}}{22}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama detallado del sistema parte 1.}}{23}{figure.4.2}
+<<<<<<< HEAD
 \contentsline {figure}{\numberline {4.3}{\ignorespaces IU1 Pantalla de login del jefe de inmobiliario.}}{40}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces IU2 Pantalla de Inicio de Sesi\IeC {\'o}n del jefe de inmobiliario.}}{41}{figure.4.4}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces IU3 Pantalla de Actividades.}}{41}{figure.4.5}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces IU4 Pantalla de Editar Actividad.}}{42}{figure.4.6}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces IU5 Pantalla de Edici\IeC {\'o}n terminada.}}{42}{figure.4.7}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces IU6 Pantalla de Ver Actividad.}}{43}{figure.4.8}
+=======
+\contentsline {figure}{\numberline {4.3}{\ignorespaces IU1 Pantalla de login del jefe de inmobiliario.}}{36}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces IU2 Pantalla de Inicio de Sesi\IeC {\'o}n del jefe de inmobiliario.}}{36}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces IU3 Pantalla de Actividades.}}{37}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces IU4 Pantalla de Editar Actividad.}}{37}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces IU5 Pantalla de Edici\IeC {\'o}n terminada.}}{38}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces IU6 Pantalla de Ver Actividad.}}{38}{figure.4.8}
+>>>>>>> 9f9a7873d393d15ef2e51ed82dfdb98c90dd4493

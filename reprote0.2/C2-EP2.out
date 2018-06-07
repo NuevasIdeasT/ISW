@@ -48,11 +48,12 @@
 \BOOKMARK [2][-]{subsection.4.5.2}{Atributos importantes}{section.4.5}% 48
 \BOOKMARK [2][-]{subsection.4.5.3}{Trayectorias del Caso de Uso}{section.4.5}% 49
 \BOOKMARK [2][-]{subsection.4.5.4}{Puntos de extensi\363n}{section.4.5}% 50
-\BOOKMARK [1][-]{section.4.6}{CU4 Agregar actividad a la sucursal}{chapter.4}% 51
+\BOOKMARK [1][-]{section.4.6}{CU5 Agregar actividad a la sucursal}{chapter.4}% 51
 \BOOKMARK [2][-]{subsection.4.6.1}{Descripci\363n completa}{section.4.6}% 52
 \BOOKMARK [2][-]{subsection.4.6.2}{Atributos importantes}{section.4.6}% 53
 \BOOKMARK [2][-]{subsection.4.6.3}{Trayectorias del Caso de Uso}{section.4.6}% 54
 \BOOKMARK [2][-]{subsection.4.6.4}{Puntos de extensi\363n}{section.4.6}% 55
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.4.7}{CU22 Iniciar sesi\363n cliente gimnasio}{chapter.4}% 56
 \BOOKMARK [2][-]{subsection.4.7.1}{Descripci\363n completa}{section.4.7}% 57
 \BOOKMARK [2][-]{subsection.4.7.2}{Atributos importantes}{section.4.7}% 58
@@ -71,3 +72,9 @@
 \BOOKMARK [2][-]{subsection.4.10.3}{Trayectorias del Caso de Uso}{section.4.10}% 71
 \BOOKMARK [1][-]{section.4.11}{Gui\363n de Pruebas}{chapter.4}% 72
 \BOOKMARK [2][-]{subsection.4.11.1}{Gui\363n de prueba 1}{section.4.11}% 73
+=======
+\BOOKMARK [1][-]{section.4.7}{Gui\363n de Pruebas}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.7.1}{Gui\363n de prueba 1}{section.4.7}% 57
+\BOOKMARK [2][-]{subsection.4.7.2}{Gui\363n de prueba 2}{section.4.7}% 58
+\BOOKMARK [2][-]{subsection.4.7.3}{Gui\363n de prueba 2}{section.4.7}% 59
+>>>>>>> 9f9a7873d393d15ef2e51ed82dfdb98c90dd4493

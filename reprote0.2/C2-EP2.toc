@@ -49,11 +49,12 @@
 \contentsline {subsection}{\numberline {4.5.2}Atributos importantes}{30}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Trayectorias del Caso de Uso}{30}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Puntos de extensi\IeC {\'o}n}{30}{subsection.4.5.4}
-\contentsline {section}{\numberline {4.6}CU4 Agregar actividad a la sucursal}{32}{section.4.6}
+\contentsline {section}{\numberline {4.6}CU5 Agregar actividad a la sucursal}{32}{section.4.6}
 \contentsline {subsection}{\numberline {4.6.1}Descripci\IeC {\'o}n completa}{32}{subsection.4.6.1}
 \contentsline {subsection}{\numberline {4.6.2}Atributos importantes}{32}{subsection.4.6.2}
 \contentsline {subsection}{\numberline {4.6.3}Trayectorias del Caso de Uso}{32}{subsection.4.6.3}
 \contentsline {subsection}{\numberline {4.6.4}Puntos de extensi\IeC {\'o}n}{33}{subsection.4.6.4}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {4.7}CU22 Iniciar sesi\IeC {\'o}n cliente gimnasio}{34}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}Descripci\IeC {\'o}n completa}{34}{subsection.4.7.1}
 \contentsline {subsection}{\numberline {4.7.2}Atributos importantes}{34}{subsection.4.7.2}
@@ -72,3 +73,9 @@
 \contentsline {subsection}{\numberline {4.10.3}Trayectorias del Caso de Uso}{38}{subsection.4.10.3}
 \contentsline {section}{\numberline {4.11}Gui\IeC {\'o}n de Pruebas}{39}{section.4.11}
 \contentsline {subsection}{\numberline {4.11.1}Gui\IeC {\'o}n de prueba 1}{39}{subsection.4.11.1}
+=======
+\contentsline {section}{\numberline {4.7}Gui\IeC {\'o}n de Pruebas}{33}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Gui\IeC {\'o}n de prueba 1}{33}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Gui\IeC {\'o}n de prueba 2}{34}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Gui\IeC {\'o}n de prueba 2}{35}{subsection.4.7.3}
+>>>>>>> 9f9a7873d393d15ef2e51ed82dfdb98c90dd4493

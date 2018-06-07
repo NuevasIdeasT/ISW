@@ -3,72 +3,133 @@
 \subsection{Guión de prueba 1}
 \begin{itemize}
 \item ID: Guión 01
-\item ALCANCE: CU01
-\item NOMBRE: Iniciar sesioón de jefe de inmobiliario  
+\item ALCANCE: \UCref{CU1}
+\item NOMBRE: Iniciar sesión de jefe de inmobiliario  
 \item PREPARACIÓN:\\
 -En la BD debe de estar registrado el jefe de inmobiliario.
 \item CP 1:
 \item DATOS DE ENTRADA:\\
+<<<<<<< HEAD
 	\begin{itemize}
 		\item Correo electrónico del J.I: Jefe\_inmobiliario\@hotmail.com
 		\item Contraseña: SOY\_elJefe1
 	\end{itemize}
+=======
+	-Correo electrónico del J.I: Jefe\_inmobiliario$@$hotmail.com
+	-Contraseña: SOY\_elJefe1
+>>>>>>> 9f9a7873d393d15ef2e51ed82dfdb98c90dd4493
 \begin{center}			
 	\begin{tabular}{|l|l|l|l|}
 		\hline
 		CP 1\\
 		PASOS\\
-		\hline 1.- Ingresar a la pantalla IU08\\
-		\hline 2.- Introducir el numero de cliente.\\
-		\hline 3.- Presionar el botón buscar\\
+		\hline 1.- Introducir el correo electrónico\\
+		\hline 2.- Introducir la contraseña.\\
+		\hline 3.- Presionar el botón Iniciar Sesión\\
 		\hline
 	\end{tabular}
 \end{center}
-\item SALIDAS: Verificación y resultado si tiene acceso permitido el usuario a las diferentes 
-áreas del gimnasio.
+\item SALIDAS: \IUref{IU1}{Pantalla de Inicio de Sesión del Jefe de Inmobiliario.}\label{CU1LoginJI}
 \item CP 2:
 \item DATOS DE ENTRADA:\\
--numero de empleado: 354\\
+	-Correo electrónico: cualquier\_cosa$@$hotmail.com\\
+	-contraseña: caulquiera
 \begin{center}			
 	\begin{tabular}{|l|l|l|l|}
 		\hline
 		CP 2\\
 		PASOS\\
-		\hline 1.- Ingresar a la pantalla IU08\\
-		\hline 2.- Introducir el numero de cliente.\\
-		\hline 3.- Presionar el botón buscar\\
+		\hline 1.- Introducir el correo electrónico\\
+		\hline 2.- Introducir la contraseña.\\
+		\hline 3.- Presionar el botón Iniciar Sesión\\
 		\hline
 	\end{tabular}
 \end{center}
-\item SALIDAS: Verificación y resultado si tiene acceso permitido el usuario a las diferentes 
+\item SALIDAS: Mensaje {\bf MSG1-}``El empleado [{\em Nombre de sesión}] no existe.''.
+  
 \item CP 3:
 \item DATOS DE ENTRADA:\\
--numero de cliente: -123\\
+	-Correo electrónico del J.I: Jefe\_inmobiliario$@$hotmail.com
 \begin{center}			
 	\begin{tabular}{|l|l|l|l|}
 		\hline
 		CP 3\\
 		PASOS\\
-		\hline 1.- Ingresar a la pantalla IU08\\
-		\hline 2.- Introducir el numero de cliente.\\
-		\hline 3.- Presionar el botón buscar\\
+		\hline 1.- Introducir el correo electrónico\\
+		\hline 2.- No introducir la contraseña.\\
+		\hline 3.- Presionar el botón Iniciar Sesión\\
 		\hline
 	\end{tabular}
 \end{center}
-\item SALIDAS: "Sin especificar".
+\item SALIDAS:  Mensaje {\bf MSG3-}``Todos los campos son obligatorios.''.
 \item CP 4:
 \item DATOS DE ENTRADA:\\
--numero de cliente: 500\\
+-Correo electrónico: jefe\_inmobiliario$@$hotmail.com\\
+-contraseña: caulquiera
 \begin{center}			
 	\begin{tabular}{|l|l|l|l|}
 		\hline
-		CP 4\\
+		CP 2\\
 		PASOS\\
-		\hline 1.- Ingresar a la pantalla IU08\\
-		\hline 2.- Introducir el numero de cliente.\\
-		\hline 3.- Presionar el botón buscar\\
+		\hline 1.- Introducir el correo electrónico\\
+		\hline 2.- Introducir la contraseña.\\
+		\hline 3.- Presionar el botón Iniciar Sesión\\
 		\hline
 	\end{tabular}
 \end{center}
-\item SALIDAS: Muestra una pantalla con un formulario de datos a llenar del cliente.
+\item SALIDAS: Mensaje {\bf MSG12-}``El password no es correcto.''.
+\end{itemize}
+
+%%%para otro caso de uso%%%%%%
+\subsection{Guión de prueba 2}
+\begin{itemize}
+	\item ID: Guión 02
+	\item ALCANCE: \UCref{CU2}
+	\item NOMBRE: Consultar Actividades de sucursal  
+	\item PREPARACIÓN:\\
+	-En la BD debe de estar registrado el jefe de inmobiliario.
+	-En la BD debe de estar registrado al menos una actividad.
+	-En la BD debe de estar registrado al menos una sucursal.
+	\item CP 1:
+	\item DATOS DE ENTRADA:\\
+	-
+	\begin{center}			
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			CP 1\\
+			PASOS\\
+			\hline 1.- Inicia sesión del jefe de inmobiliario.\\
+			\hline 2.- Precionar el botón de actividades.\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\item SALIDAS: \IUref{IU2}{ Pantalla de Actividades.}\label{CU1LoginJI}
+	
+\end{itemize}
+
+%%%para otro caso de uso%%%%%%
+\subsection{Guión de prueba 2}
+\begin{itemize}
+	\item ID: Guión 02
+	\item ALCANCE: \UCref{CU3}
+	\item NOMBRE: Modificar actividad de sucursal 
+	\item PREPARACIÓN:\\
+	-En la BD debe de estar registrado el jefe de inmobiliario.
+	-En la BD debe de estar registrado al menos una actividad.
+	-En la BD debe de estar registrado al menos una sucursal.
+	\item CP 1:
+	\item DATOS DE ENTRADA:\\
+	-
+	\begin{center}			
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			CP 1\\
+			PASOS\\
+			\hline 1.- Inicia sesión del jefe de inmobiliario.\\
+			\hline 2.- Precionar el botón de actividades.\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\item SALIDAS: \IUref{IU2}{ Pantalla de Actividades.}\label{CU1LoginJI}
+	
 \end{itemize}
