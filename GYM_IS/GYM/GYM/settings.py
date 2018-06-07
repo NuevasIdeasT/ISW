@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'Activities',
     'cliente',
+=======
+    'Activities.apps.ActivitiesConfig',
+>>>>>>> Luis_Eduardo
 ]
 
 MIDDLEWARE = [
@@ -82,12 +86,12 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'ENGINE': 'django.db.backends.mysql',
-        #'NAME': 'usuarios',
-        #'USER': 'root',
-        #'PASSWORD': 'premium5395',
+        ##'ENGINE': 'django.db.backends.mysql',
+        ##'NAME': 'usuarios',
+        ##'USER': 'root',
+       ## 'PASSWORD': 'premium5395',
         #'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        #'PORT': '3306',
+        ##'PORT': '3306',
     }
 }
 

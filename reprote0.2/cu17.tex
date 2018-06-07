@@ -1,0 +1,287 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU36}{Modificar Instructor}{
+		Poder modificar los datos personales de un instructor y sus actividades asignadas.
+	}
+		\UCitem{Versión}{\color{Gray}0.4}
+		\UCitem{Autor}{\color{Gray}Quiroz Olmedo Luis Eduardo}
+		\UCitem{Supervisa}{\color{Gray}Francisco}
+		\UCitem{Actor}{Gerente}
+		\UCitem{Propósito}{Que los datos ingresados al momento de dar de alta un instructor puedan modificarse, así como también poder asignar nuevas actividades o editar las existentes asignadas a un instructor.}
+		\UCitem{Entradas}{Instructor}
+		\UCitem{Origen}{Teclado}
+		\UCitem{Salidas}{Mensaje de confirmación}
+		\UCitem{Destino}{Pantalla de Instructores.}
+		\UCitem{Precondiciones}{ •Que el actor tenga una sesión iniciada en el sistema.\newline
+        • Que el sistema tenga al menos un instructor y una actividad registrada.
+}
+		\UCitem{Postcondiciones}{El Instructor seleccionado ha sido modificado y se ve el cambio en la pantalla de Intructores}
+		\UCitem{Errores}{
+		 • El actor dejo los campos Nombre y Dirección completamente vacíos.TA-B\newline
+		 El actor dejo el campo de “Actividades Asignadas” sin ninguna actividad.TA-?
+		}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Este caso de uso inicia cuando un actor se encuentra en la pantalla de Instructores "Poner aqui la IU" y tiene una sesión iniciada.}
+		\UCpaso[\UCactor] selecciona el icono de edición sobre el instructor que se va a modificar.
+		\UCpaso despliega la pantalla “Editar instructor”.
+		\UCpaso permite editar los campos de texto “Nombre” y “Dirección” con caracteres                     libres.
+		\UCpaso despliega la pantalla “Editar instructor”.
+		\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El nombre de sesión no existe}
+			\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG1-}``El empleado [{\em Nombre de sesión}] no existe.''.
+			\UCpaso[\UCactor] Introduce nombre usuario correcto.
+			\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Contraseña incorrecta}
+			\UCpaso Muestra el Mensaje {\bf MSG1¿2-}``El password no es correcto.''.
+			\UCpaso[\UCactor] Introduce password correcto.
+			\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+
+
+%--------------------------------------
+% Puntos de extensión
+\subsection{Puntos de extensión}
+\UCExtenssionPoint{
+	% Cuando:
+	Desea acceder a las sucursales.
+	Desea acceder a las actividades.
+	Desea acceder a las áreas.
+	Desea acceder a su perfil.
+}{
+	% Durante la región:
+	En el paso 5.
+}{
+	% Casos de uso a los que extiende:
+	\hyperlink{CU2}{CU2 Consultar Actividades de sucursal}.
+}
+		
+		
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU2}{Consultar Actividades de sucursal}{
+		Acceder al sistema a través del inicio de sesión del jefe de inmobiliario y ver datos generales de las actividades que hay en la sucursal.
+	}
+	\UCitem{Versión}{\color{Gray}0.4}
+	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martínez}
+	\UCitem{Supervisa}{\color{Gray}Francisco}
+	\UCitem{Actor}{Jefe de inmobiliario}
+	\UCitem{Propósito}{Para que el jefe pueda ver las actividades que tiene la sucursal y saber si sus datos son correctos y/o poderlos modificar.}
+	\UCitem{Entradas}{Botón de actividad.}
+	\UCitem{Origen}{Mouse}
+	\UCitem{Salidas}{Nombre de la sucursal, nombre del isntructor, hora y dia dde la actividad.}
+	\UCitem{Destino}{Pantalla del jefe de inmobiliario.}
+	\UCitem{Precondiciones}{El jefe de inmobiliario debe inciiar sesion para ver las actividades, debe haber al menos una actividad.}
+	\UCitem{Postcondiciones}{}
+	\UCitem{Errores}{}
+	\UCitem{Tipo}{Caso de uso primario}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Jefe de Inmobiliario.}\label{CU1LoginJI}.
+	\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
+	\UCpaso Verifica que el nombre y password son correctos para ingresar sesión del jefe de inmobiliario.
+	\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
+	\UCpaso[\UCactor] Selecciona en su menú el botón de las actividades. 
+	\UCpaso Despliega la \IUref{IU3}{Pantalla Actividades}.
+	
+\end{UCtrayectoria}
+
+
+%--------------------------------------
+% Puntos de extensión
+\subsection{Puntos de extensión}
+\UCExtenssionPoint{
+	% Cuando:
+	Desee ver información completa de la actividad.
+	Desee editar la información.
+	Desee agregar una nueva actividad.
+}{
+	% Durante la región:
+	En el paso 5.
+}{
+	% Casos de uso a los que extiende:
+	\hyperlink{CU3}{CU3 Modificar actividad de sucursal}.
+	\hyperlink{CU4}{CU4 Ver actividad de sucursal}.
+	\hyperlink{CU5}{CU5 Agregar actividad de sucursal}.
+	\hyperlink{CU6}{CU6 Buscar Actividad en específico}.
+}		
+		
+
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU3}{Modificar actividad de sucursal}{
+	Modificar los datos permitidos a través de un formulario que despliega el sistema.
+	}
+	\UCitem{Versión}{\color{Gray}0.4}
+	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martínez}
+	\UCitem{Supervisa}{\color{Gray}Francisco}
+	\UCitem{Actor}{Jefe de inmobiliario}
+	\UCitem{Propósito}{Para que el jefe de inmobiliario pueda mantener la informacion correcta de las actividades que hay en el sistema.}
+	\UCitem{Entradas}{Nombre de la actividad, el dia y la hora que se imparte la actividad, nombre del instructor,imagen(es) y descripcion.}
+	\UCitem{Origen}{Mouse y teclado}
+	\UCitem{Salidas}{Numero de actividad, nombre de la actividad, nombre de la sucursal, el dia y la hora que se imparte la actividad,nombre del instructor, la descripcion de la actividad, dirección de la sucursal, imagen(es) y mensaje de operación exitosa.}
+	\UCitem{Destino}{Pantalla del jefe de inmobiliario.}
+	\UCitem{Precondiciones}{La actividad debe estar registrada para poder ser modificada. Debe existir en el sistema el nombre del isntructor.}
+	\UCitem{Postcondiciones}{La actividad quedará modificada con los nuevos datos, si es correcto el formato con el que se lleno el formulario, la información se verá actualizada en la consulta de ver actividad.}
+	\UCitem{Errores}{Formulario no este llenado de acuerdo al formato.}
+	\UCitem{Tipo}{Caso de uso primario}
+	\UCitem{Observaciones}{Todos los campos del formulario son obligatorios.}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Selecciona en su menú el botón de las actividades vía \IUref{IU3}{Pantalla Actividades}.
+	\UCpaso Despliega la \IUref{IU3}{Pantalla Actividades}.
+	\UCpaso[\UCactor] Selecciona botón de Editar que aparece en la \IUref{IU3}{Pantalla Actividades}.
+	\UCpaso Despliega la \IUref{IU4}{Pantalla Editar Actividad}.
+	\UCpaso[\UCactor] Selecciona el recuadro que quiera modificar .
+	\UCpaso[\UCactor] Borra los datos del recuadro que seleccionó para poner el nuevo dato.
+	\UCpaso[\UCactor] Pulsa el botón de aceptar para confirmar la operación que se realizó.
+	\UCpaso Guarda los datos que están en los recuadros.	
+	\UCpaso Despliega la \IUref{IU5}{Pantalla Edición terminada}.
+	\UCpaso[\UCactor] Verifica que los datos estén como el desea y oprime el botón aceptar.
+	\UCpaso Despliega la \IUref{IU3}{Pantalla Actividades}.
+\end{UCtrayectoria}
+
+%\BRref{BR129}{Determinar si un Estudiante puede inscribir Seminario.} \Trayref{A}
+%--------------------------------------		
+\begin{UCtrayectoriaA}{A}{El jefe de inmobiliario deja información en blanco}
+	\UCpaso Muestra el Mensaje {\bf MSG3-}``Todos los campos son obligatorios.''.
+	\UCpaso[\UCactor] Llena los campos faltantes.
+	\UCpaso[\UCactor] Continua con el paso 8 del \UCref{CU3}.
+\end{UCtrayectoriaA}
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU4}{Ver actividad de sucursal}{
+		El sistema muestrará la información completa de una actividad seleccionada.
+	}
+	\UCitem{Versión}{\color{Gray}0.4}
+	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martínez}
+	\UCitem{Supervisa}{\color{Gray}Francisco}
+	\UCitem{Actor}{Jefe de inmobiliario}
+	\UCitem{Propósito}{Para que el jefe de inmobiliario pueda revisar que los datos de la actividad sean correctos.}
+	\UCitem{Entradas}{botón de ver actividad.}
+	\UCitem{Origen}{Teclado}
+	\UCitem{Salidas}{Numero de actividad, nombre de la actividad, nombre de la sucursal, el dia y la hora que se imparte la actividad,nombre del instructor, la descripcion de la actividad, dirección de la sucursal, imagen(es).}
+	\UCitem{Destino}{Pantalla del jefe de inmobiliario.}
+	\UCitem{Precondiciones}{El jefe de inmobiliario debe estar dentro de susesión para poder ver la información. La actividad que desee ver, debe estar registrada.}
+	\UCitem{Postcondiciones}{}
+	\UCitem{Errores}{Actividad inexistente}
+	\UCitem{Tipo}{Caso de uso primario}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Ingresa a la \IUref{IU3}{Pantalla de Actividades.}\label{CU1LoginJI}.
+	\UCpaso[\UCactor] Oprime el botón de ver.
+	\UCpaso Despliega la \IUref{IU6}{Pantalla Ver Actividad}.
+	\UCpaso Oprime el botón de aceptar para regresar a la  \IUref{IU3}{Pantalla de Actividades.}\label{CU1LoginJI}.
+\end{UCtrayectoria}
+
+
+%--------------------------------------
+% Puntos de extensión
+\subsection{Puntos de extensión}
+\UCExtenssionPoint{
+	% Cuando:
+	Desea modificar datos de actividad.
+}{
+	% Durante la región:
+	En el paso 3.
+}{
+	% Casos de uso a los que extiende:
+	\hyperlink{CU3}{CU3 Modificar actividad de sucursal}.
+}
+
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU4}{Agregar actividad a la sucursal}{
+		El Jefe de inmobiliario podrá agregar una nueva actividad al sistema.
+	}
+	\UCitem{Versión}{\color{Gray}0.4}
+	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martínez}
+	\UCitem{Supervisa}{\color{Gray}Francisco}
+	\UCitem{Actor}{Jefe de inmobiliario}
+	\UCitem{Propósito}{Para que cada que se agregue una nueva actividad a la sucursal se pueda incorporar su información al sistema.}
+	\UCitem{Entradas}{}
+	\UCitem{Origen}{Teclado}
+	\UCitem{Salidas}{.}
+	\UCitem{Destino}{Pantalla del jefe de inmobiliario.}
+	\UCitem{Precondiciones}{.}
+	\UCitem{Postcondiciones}{El jefe de inmobiliario deberá ver un menú con; perfil, sucursales, actividades y áreas, y sus datos de salida. }
+	\UCitem{Errores}{}
+	\UCitem{Tipo}{Caso de uso primario}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Jefe de Inmobiliario.}\label{CU1LoginJI}.
+	\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
+	\UCpaso Verifica que el nombre y password son correctos para ingresar sesión del jefe de inmobiliario.
+	\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
+\end{UCtrayectoria}
+
+%--------------------------------------		
+\begin{UCtrayectoriaA}{A}{El nombre de sesión no existe}
+	\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG1-}``El empleado [{\em Nombre de sesión}] no existe.''.
+	\UCpaso[\UCactor] Introduce nombre usuario correcto.
+	\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+\end{UCtrayectoriaA}
+
+%--------------------------------------
+\begin{UCtrayectoriaA}{B}{Contraseña incorrecta}
+	\UCpaso Muestra el Mensaje {\bf MSG1¿2-}``El password no es correcto.''.
+	\UCpaso[\UCactor] Introduce password correcto.
+	\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+\end{UCtrayectoriaA}
+
+
+%--------------------------------------
+% Puntos de extensión
+\subsection{Puntos de extensión}
+\UCExtenssionPoint{
+	% Cuando:
+	Desea acceder a las sucursales.
+	Desea acceder a las actividades.
+	Desea acceder a las áreas.
+	Desea acceder a su perfil.
+}{
+	% Durante la región:
+	En el paso 5.
+}{
+	% Casos de uso a los que extiende:
+	\hyperlink{CU2}{CU2 Consultar Actividades de sucursal}.
+}
