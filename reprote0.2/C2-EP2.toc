@@ -1,0 +1,58 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Presentaci\IeC {\'o}n}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Organizaci\IeC {\'o}n del contenido}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Notaci\IeC {\'o}n, s\IeC {\'\i }mbolos y convenciones utilizadas}{1}{section.1.3}
+\contentsline {chapter}{\numberline {2}Modelo del Alcance}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Modelado de Usuarios}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Organigrama de la Empresa}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Jefe de Inmobiliario}{3}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Cliente}{5}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Requerimientos de usuario}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Especificaci\IeC {\'o}n de plataforma}{5}{section.2.3}
+\contentsline {chapter}{\numberline {3}Modelo del Negocio}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Contexto}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}T\IeC {\'e}rminos del Negocio}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Modelo del dominio del problema}{10}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Modelo del dominio del problema}{10}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Entidad: Cliente}{10}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Entidad: Gerente}{10}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Entidad: Instructor}{13}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Entidad: Recepcionista}{13}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Entidad: Vendedor}{13}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Entidad: Sucursal}{14}{subsection.3.3.7}
+\contentsline {subsection}{\numberline {3.3.8}Entidad: Venta}{14}{subsection.3.3.8}
+\contentsline {subsection}{\numberline {3.3.9}Entidad: Actividad}{14}{subsection.3.3.9}
+\contentsline {subsection}{\numberline {3.3.10}Entidad: Area}{15}{subsection.3.3.10}
+\contentsline {section}{\numberline {3.4}Modelado de Reglas de negocio}{15}{section.3.4}
+\contentsline {section}{\numberline {3.5}Modelo de Procesos AS-IS}{17}{section.3.5}
+\contentsline {section}{\numberline {3.6}Modelo de procesos TO-BE}{19}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}PROCM-01 ...}{19}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Modelo din\IeC {\'a}mico}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Descripci\IeC {\'o}n de actores}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}CU1 Iniciar sesi\IeC {\'o}n de jefe de inmobiliario}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Descripci\IeC {\'o}n completa}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Atributos importantes}{24}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Trayectorias del Caso de Uso}{24}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Puntos de extensi\IeC {\'o}n}{25}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}CU2 Consultar Actividades de sucursal}{26}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Descripci\IeC {\'o}n completa}{26}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Atributos importantes}{26}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Trayectorias del Caso de Uso}{26}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Puntos de extensi\IeC {\'o}n}{27}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}CU3 Modificar actividad de sucursal}{28}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Descripci\IeC {\'o}n completa}{28}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Atributos importantes}{28}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Trayectorias del Caso de Uso}{28}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}CU4 Ver actividad de sucursal}{30}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Descripci\IeC {\'o}n completa}{30}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Atributos importantes}{30}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Trayectorias del Caso de Uso}{30}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Puntos de extensi\IeC {\'o}n}{30}{subsection.4.5.4}
+\contentsline {section}{\numberline {4.6}CU4 Agregar actividad a la sucursal}{32}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Descripci\IeC {\'o}n completa}{32}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Atributos importantes}{32}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}Trayectorias del Caso de Uso}{32}{subsection.4.6.3}
+\contentsline {subsection}{\numberline {4.6.4}Puntos de extensi\IeC {\'o}n}{33}{subsection.4.6.4}
+\contentsline {section}{\numberline {4.7}Gui\IeC {\'o}n de Pruebas}{33}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Gui\IeC {\'o}n de prueba 1}{33}{subsection.4.7.1}
