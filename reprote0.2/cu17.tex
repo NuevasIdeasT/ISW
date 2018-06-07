@@ -27,8 +27,8 @@
 }
 		\UCitem{Postcondiciones}{El Instructor seleccionado ha sido modificado y se ve el cambio en la pantalla de Intructores}
 		\UCitem{Errores}{
-		 • El actor dejo los campos Nombre y Dirección completamente vacíos.TA-B\newline
-		 El actor dejo el campo de “Actividades Asignadas” sin ninguna actividad.TA-?
+		 • El actor dejo los campos Nombre y Dirección completamente vacíos.\textbf{Trayectoria Alternativa B}\newline
+		 El actor dejo el campo de “Actividades Asignadas” sin ninguna actividad.\textbf{Trayectoria Alternativa C}.
 		}
 		\UCitem{Tipo}{Caso de uso primario}
 		\UCitem{Observaciones}{}
@@ -37,141 +37,160 @@
 	\begin{UCtrayectoria}{Este caso de uso inicia cuando un actor se encuentra en la pantalla de Instructores "Poner aqui la IU" y tiene una sesión iniciada.}
 		\UCpaso[\UCactor] selecciona el icono de edición sobre el instructor que se va a modificar.
 		\UCpaso despliega la pantalla “Editar instructor”.
-		\UCpaso permite editar los campos de texto “Nombre” y “Dirección” con caracteres                     libres.
-		\UCpaso despliega la pantalla “Editar instructor”.
-		\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
+		\UCpaso permite editar los campos de texto “Nombre” y “Dirección”.
+		\UCpaso[\UCactor] introduce un Nombre y Dirección nuevos.
+		\UCpaso consulta las actividades con horarios libres y las despliega en la pantalla en forma de lista.
+		\UCpaso[\UCactor] selecciona una actividad.
+		\UCpaso consulta los horarios disponibles de la actividad seleccionada y los despliega en la pantalla en forma de lista.
+		\UCpaso[\UCactor] selecciona un horario.
+		\UCpaso[\UCactor] selecciona el boton guardar.
+		\UCpaso actualiza los campos de nombre y dirección con los valores introducidos en el paso 4.
+		\UCpaso \textbf{ INCLUDE(CU38 Asignar Actividad de Instructor)}.
+		\UCpaso despliega la pantalla de Instructores "IU" con el mensaje {\bf MSG4-}``El Instructor [{\em Nombre de Instructor}] ha sido actualizado con éxito.''.
 	\end{UCtrayectoria}
 
 %--------------------------------------		
-		\begin{UCtrayectoriaA}{A}{El nombre de sesión no existe}
-			\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG1-}``El empleado [{\em Nombre de sesión}] no existe.''.
-			\UCpaso[\UCactor] Introduce nombre usuario correcto.
-			\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+		\begin{UCtrayectoriaA}{A}{El actor NO introduce un nombre o dirección nuevos.}
+			\UCpaso deja los campos “Nombre” y “Dirección” sin ningún cambio.
 		\end{UCtrayectoriaA}
 		
 %--------------------------------------
-		\begin{UCtrayectoriaA}{B}{Contraseña incorrecta}
-			\UCpaso Muestra el Mensaje {\bf MSG1¿2-}``El password no es correcto.''.
-			\UCpaso[\UCactor] Introduce password correcto.
-			\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+		\begin{UCtrayectoriaA}{B}{El actor deja vacío el campo “Nombre” o “Dirección” o ambos campos.}
+			\UCpaso despliega un mensaje dentro del campo con la leyenda {\bf MSG5-}``Campo Requerido'' .
 		\end{UCtrayectoriaA}
-
-
 %--------------------------------------
-% Puntos de extensión
-\subsection{Puntos de extensión}
-\UCExtenssionPoint{
-	% Cuando:
-	Desea acceder a las sucursales.
-	Desea acceder a las actividades.
-	Desea acceder a las áreas.
-	Desea acceder a su perfil.
-}{
-	% Durante la región:
-	En el paso 5.
-}{
-	% Casos de uso a los que extiende:
-	\hyperlink{CU2}{CU2 Consultar Actividades de sucursal}.
-}
-		
-		
+		\begin{UCtrayectoriaA}{C}{El actor NO selecciona ninguna actividad.}
+			\UCpaso despliega un mensaje en pantalla con la leyenda {\bf MSG6-}``Asignar al menos una actividad'' .
+		\end{UCtrayectoriaA}
+%--------------------------------------
+		\begin{UCtrayectoriaA}{D}{El actor selecciona el icono de borrado de la actividad }
+			\UCpaso muestra una alerta en pantalla con el mensaje “Seguro que deseas eliminar la actividad” y las opciones “Aceptar” y “Cancelar”.
+		    \UCpaso[\UCactor] selecciona la opción Aceptar.
+		    \UCpaso elimina la relacion de con el horario y la actividad y la elimina de la lista de actividades asignadas.
+		\end{UCtrayectoriaA}
+%--------------------------------------
+		\begin{UCtrayectoriaA}{E}{El actor selecciona la pestaña “Nueva Actividad”.}
+			\UCpaso ejecuta los pasos [5-12].
+		\end{UCtrayectoriaA}
+%--------------------------------------
+		\begin{UCtrayectoriaA}{F}{El sistema no tiene actividades disponibles}
+			\UCpaso Muestra una alerta en pantalla con el mensaje "No hay actividades disponibles".
+		\end{UCtrayectoriaA}		
+
 % Copie este bloque por cada caso de uso:
 %-------------------------------------- COMIENZA descripción del caso de uso.
 
 %\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
 %--------------------------------------
-\begin{UseCase}{CU2}{Consultar Actividades de sucursal}{
-		Acceder al sistema a través del inicio de sesión del jefe de inmobiliario y ver datos generales de las actividades que hay en la sucursal.
+\begin{UseCase}{CU38}{Registrar Instructor}{
+		Crear un nuevo instructor en el sistema introduciendo sus datos personales y asignándole al menos una actividad.
 	}
 	\UCitem{Versión}{\color{Gray}0.4}
-	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martínez}
+	\UCitem{Autor}{\color{Gray}Quiroz Olmedo Luis Eduardo}
 	\UCitem{Supervisa}{\color{Gray}Francisco}
-	\UCitem{Actor}{Jefe de inmobiliario}
-	\UCitem{Propósito}{Para que el jefe pueda ver las actividades que tiene la sucursal y saber si sus datos son correctos y/o poderlos modificar.}
-	\UCitem{Entradas}{Botón de actividad.}
-	\UCitem{Origen}{Mouse}
-	\UCitem{Salidas}{Nombre de la sucursal, nombre del isntructor, hora y dia dde la actividad.}
-	\UCitem{Destino}{Pantalla del jefe de inmobiliario.}
+	\UCitem{Actor}{Gerente}
+	\UCitem{Propósito}{Permitir al Gerente registrar nuevos Instructores en el sistema para que se les pueda asignar actividades nuevas o existentes y poder gestionar a los instructores.}
+	\UCitem{Entradas}{•Nombre\newline
+	•Dirección\newline
+	•Nombre de Usuario\newline
+	•Password}
+	\UCitem{Origen}{Mouse y Teclado}
+	\UCitem{Salidas}{Mensaje de confirmación.}
+	\UCitem{Destino}{Pantalla de Instructores.}
 	\UCitem{Precondiciones}{El jefe de inmobiliario debe inciiar sesion para ver las actividades, debe haber al menos una actividad.}
-	\UCitem{Postcondiciones}{}
-	\UCitem{Errores}{}
-	\UCitem{Tipo}{Caso de uso primario}
-	\UCitem{Observaciones}{}
-\end{UseCase}
-%--------------------------------------
-\begin{UCtrayectoria}{Principal}
-	\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Jefe de Inmobiliario.}\label{CU1LoginJI}.
-	\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
-	\UCpaso Verifica que el nombre y password son correctos para ingresar sesión del jefe de inmobiliario.
-	\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
-	\UCpaso[\UCactor] Selecciona en su menú el botón de las actividades. 
-	\UCpaso Despliega la \IUref{IU3}{Pantalla Actividades}.
-	
-\end{UCtrayectoria}
-
-
-%--------------------------------------
-% Puntos de extensión
-\subsection{Puntos de extensión}
-\UCExtenssionPoint{
-	% Cuando:
-	Desee ver información completa de la actividad.
-	Desee editar la información.
-	Desee agregar una nueva actividad.
-}{
-	% Durante la región:
-	En el paso 5.
-}{
-	% Casos de uso a los que extiende:
-	\hyperlink{CU3}{CU3 Modificar actividad de sucursal}.
-	\hyperlink{CU4}{CU4 Ver actividad de sucursal}.
-	\hyperlink{CU5}{CU5 Agregar actividad de sucursal}.
-	\hyperlink{CU6}{CU6 Buscar Actividad en específico}.
-}		
-		
-
-
-%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
-%--------------------------------------
-\begin{UseCase}{CU3}{Modificar actividad de sucursal}{
-	Modificar los datos permitidos a través de un formulario que despliega el sistema.
-	}
-	\UCitem{Versión}{\color{Gray}0.4}
-	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martínez}
-	\UCitem{Supervisa}{\color{Gray}Francisco}
-	\UCitem{Actor}{Jefe de inmobiliario}
-	\UCitem{Propósito}{Para que el jefe de inmobiliario pueda mantener la informacion correcta de las actividades que hay en el sistema.}
-	\UCitem{Entradas}{Nombre de la actividad, el dia y la hora que se imparte la actividad, nombre del instructor,imagen(es) y descripcion.}
-	\UCitem{Origen}{Mouse y teclado}
-	\UCitem{Salidas}{Numero de actividad, nombre de la actividad, nombre de la sucursal, el dia y la hora que se imparte la actividad,nombre del instructor, la descripcion de la actividad, dirección de la sucursal, imagen(es) y mensaje de operación exitosa.}
-	\UCitem{Destino}{Pantalla del jefe de inmobiliario.}
-	\UCitem{Precondiciones}{La actividad debe estar registrada para poder ser modificada. Debe existir en el sistema el nombre del isntructor.}
-	\UCitem{Postcondiciones}{La actividad quedará modificada con los nuevos datos, si es correcto el formato con el que se lleno el formulario, la información se verá actualizada en la consulta de ver actividad.}
-	\UCitem{Errores}{Formulario no este llenado de acuerdo al formato.}
+	\UCitem{Postcondiciones}{•Que el actor tenga una sesión iniciada
+	\newline•Que el nombre de Usuario no este dado de alta en el sistema}
+	\UCitem{Errores}{•Campos de Texto nulos o incompletos.\textbf{Trayectoria Alternativa A y B} \newline
+	•Todas las actividades ocupadas.\textbf{Trayectoria Alternativa C}\newline
+	•El actor no selecciona ninguna actividad.\textbf{Trayectoria Alternativa D}\newline}
 	\UCitem{Tipo}{Caso de uso primario}
 	\UCitem{Observaciones}{Todos los campos del formulario son obligatorios.}
 \end{UseCase}
 %--------------------------------------
-\begin{UCtrayectoria}{Principal}
-	\UCpaso[\UCactor] Selecciona en su menú el botón de las actividades vía \IUref{IU3}{Pantalla Actividades}.
-	\UCpaso Despliega la \IUref{IU3}{Pantalla Actividades}.
-	\UCpaso[\UCactor] Selecciona botón de Editar que aparece en la \IUref{IU3}{Pantalla Actividades}.
-	\UCpaso Despliega la \IUref{IU4}{Pantalla Editar Actividad}.
-	\UCpaso[\UCactor] Selecciona el recuadro que quiera modificar .
-	\UCpaso[\UCactor] Borra los datos del recuadro que seleccionó para poner el nuevo dato.
-	\UCpaso[\UCactor] Pulsa el botón de aceptar para confirmar la operación que se realizó.
-	\UCpaso Guarda los datos que están en los recuadros.	
-	\UCpaso Despliega la \IUref{IU5}{Pantalla Edición terminada}.
-	\UCpaso[\UCactor] Verifica que los datos estén como el desea y oprime el botón aceptar.
-	\UCpaso Despliega la \IUref{IU3}{Pantalla Actividades}.
+\begin{UCtrayectoria}{Este caso de uso inicia cuando un actor se encuentra en la pantalla de “Instructores”}
+	\UCpaso[\UCactor] selecciona el boton "Agregar Nuevo Instructor".
+	\UCpaso despliega la pantalla "UI" "Nuevo Instructor"
+	\UCpaso[\UCactor]introduce el nombre completo del instructor en el campo de texto “Nombre completo”.
+	\UCpaso sistema valida que los valores introducidos cumplen con las caracteristicas de un nombre.[aA-zA]
+	\UCpaso[\UCactor]introduce la dirección del instructor en el campo de texto “Dirección”.
+	\UCpaso sistema valida que los valores introducidos cumplen con las caracteristicas de una dirección.[aA-zA1-9 '.' '-']
+	\UCpaso selecciona el boton "Nueva Actividad"
+	\UCpaso consulta que actividades tienen horarios libres y las despliega en la pantalla en forma de lista.
+	\UCpaso[\UCactor] selecciona una actividad.
+	\UCpaso \textbf{INCLUDE (CU38 Asignar Actividad al Instructor)}.
+	\UCpaso[\UCactor] da clic en el icono guardar.
+	\UCpaso valida que al menos una actividad ha sido asignada.
+	\UCpaso crea una nueva entidad Instructor con los datos introducidos ligado con las o la actividad seleccionadas y sus horarios seleccionados.
+	\UCpaso despliega la pantalla de instructores con el mensaje {\bf MSG7-} “Registro Exitoso”.
+\end{UCtrayectoria}
+%--------------------------------------
+\begin{UCtrayectoriaA}{A}{El campo ''Nombre completo'' tiene menos de dos palabras o es nulo.}
+			\UCpaso despliega un mensaje dentro del campo con la leyenda “Nombre invalido” y limpia el campo “Nombre Completo” y se continúa en el paso [1].
+\end{UCtrayectoriaA}
+%--------------------------------------
+\begin{UCtrayectoriaA}{B}{El campo ''Direción'' tiene menos de dos palabras o es nulo.}
+			\UCpaso despliega un mensaje dentro del campo con la leyenda “Dirección invalida” y limpia el campo “Direccion” y se continúa en el paso [1].
+\end{UCtrayectoriaA}
+%--------------------------------------
+\begin{UCtrayectoriaA}{C}{Todas las Actividades se encuentran ocupadas}
+		   \UCpaso despliega un mensaje en pantalla con la leyenda {\bf MSG8-} “No se cuenta con Actividades disponibles para asignar”.
+		   \UCpaso despliega la pantalla de Instructores cancelando el registro y no guardando ningún dato.
+\end{UCtrayectoriaA}
+%--------------------------------------
+\begin{UCtrayectoriaA}{D}{El actor no selecciono ninguna actividad}
+		   \UCpaso despliega un mensaje en pantalla con la leyenda {\bf MSG9-} “Se debe seleccionar al menos una actividad” y se continua en el paso [9].	  
+\end{UCtrayectoriaA}
+%--------------------------------------
+\begin{UCtrayectoriaA}{E}{El actor selecciona el boton ''Cancelar''}
+		   \UCpaso muestra una alerta en pantalla con la leyenda {\bf MSG10-} “Estas seguro que deseas Cancelar” y dando las opciones Aceptar y Cancelar.
+		   \UCpaso[\UCactor] selecciona ''Aceptar''.
+		   \UCpaso despliega la pantalla de ''UI'' Instructores cancelando el registro y no guardando ningún dato.
+\end{UCtrayectoriaA}
+
+%--------------------------------------
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU38}{Asignar Actividad al Instructor}{
+	Asignar una entidad Actividad seleccionada previamente con una entidad Instructor.
+	}
+	\UCitem{Versión}{\color{Gray}0.4}
+	\UCitem{Autor}{\color{Gray}Quiroz Olmedo Luis}
+	\UCitem{Supervisa}{\color{Gray}Francisco}
+	\UCitem{Actor}{Gerente}
+	\UCitem{Propósito}{Crear una unión con una actividad seleccionada y un horario y para evitar duplicados en asignaciones de actividades}
+	\UCitem{Entradas}{Actividad}
+	\UCitem{Origen}{Mouse y teclado}
+	\UCitem{Salidas}{-}
+	\UCitem{Destino}{Pantalla de Editar Instructor o Registrar Instructor}
+	\UCitem{Precondiciones}{• Que el sistema tenga al menos un instructor y una actividad registrados.\newline
+	• Que el actor haya seleccionado una actividad.
+	}
+	\UCitem{Postcondiciones}{Quedara unido un horario de la Actividad seleccionada con un Instructor.}
+	\UCitem{Errores}{Formulario no este llenado de acuerdo al formato.}
+	\UCitem{Tipo}{Caso de uso secundario}
+	
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Este caso de uso inicia cuando un actor se encuentra en la pantalla de ''Nuevo Instructor'' o en la pantalla ''Editar Instructor'' y seleccionó una actividad disponible}
+	\UCpaso consulta los horarios que no han sido asignados de la actividad seleccionada y los despliega en la pantalla en forma de lista.
+	\UCpaso[\UCactor] selecciona el horario.
+	\UCpaso el sistema elimina de la lista de horarios disponibles el horario seleccionado.
+	\UCpaso el sistema reserva el horario para que ya no sea mostrado en alguna sesion existente.
+	\UCpaso el sistema liga el horario seleccionado con el Instructor que se esta editando.
 \end{UCtrayectoria}
 
 %\BRref{BR129}{Determinar si un Estudiante puede inscribir Seminario.} \Trayref{A}
 %--------------------------------------		
-\begin{UCtrayectoriaA}{A}{El jefe de inmobiliario deja información en blanco}
-	\UCpaso Muestra el Mensaje {\bf MSG3-}``Todos los campos son obligatorios.''.
-	\UCpaso[\UCactor] Llena los campos faltantes.
-	\UCpaso[\UCactor] Continua con el paso 8 del \UCref{CU3}.
+\begin{UCtrayectoriaA}{A}{No hay horarios disponibles de la actividad seleccionada.}
+	\UCpaso muestra un mensaje en pantalla con la leyenda {\bf MSG11-} ''Sin horarios disponibles''.
+	\UCpaso redirecciona ala pantalla \IUref{IU3}{Editar Instructor} o  \IUref{IU4}{Registrar Instructor} dependiendo de donde venga la selección.
+	%\UCpaso[\UCactor] Continua con el paso 8 del \UCref{CU3}.
+\end{UCtrayectoriaA}
+%--------------------------------------		
+\begin{UCtrayectoriaA}{B}{El actor no selecciona ningún horario}
+
+	\UCpaso muestra un mensaje en pantalla con la leyenda {\bf MSG12-} ''Se debe seleccionar al menos un horario'' y se continua en el paso [2].
 \end{UCtrayectoriaA}
 
 
