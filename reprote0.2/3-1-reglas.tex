@@ -1,0 +1,150 @@
+\begin{BussinesRule}{BR1}{Cortesía de acceso.}
+	\BRitem[Tipo:] Regla de integridad referencial o estructural. 
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:]	Si una persona no registrada en los clubs solicita una cortesía, se le registrara en el sistema y se le dará acceso por una solo única vez sin posibilidad de repetición..
+	\BRitem[Motivación:] Para generar ventas de membresía.
+	%\BRitem[Sentencia:] $\forall p \in Persona \Rightarrow 01-Enero-1900~<~p.fechaDeNacimiento~<~fechaActual$.
+	\BRitem[Ejemplo positivo:] Para personas que no estén registradas en el sistema, cumplen la regla: 		
+        	
+	\BRitem[Ejemplo negativo:] Para quienes aparece su nombre en el sistema, no cumplen la regla.
+	
+	\BRitem[Referenciado por:] %\hyperlink{CUCE3.2}{CUCE3.2}, \hyperlink{CUCE3.3}{CUCE3.3}.
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR2}{Límite de personas en Membresía Familiar.} 
+	\BRitem[Tipo:] Regla de integridad referencial o estructural. 
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Cronometrada. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Al adquirir una membresía familiar el número máximo de usuarios que se pueden registrar para la entrada a las sucursales es de 10 personas sin distinción de edad y sin remplazo.
+	\BRitem[Ejemplo positivo:] Para familias con menos de 11 de integrantes, cumplen la regla:
+		\begin{itemize}
+			\item Familias con 10 integrantes
+			\item Familias con 9 integrantes
+			\item .
+			\item .
+			\item .
+			\item Familias con 2 integrantes
+			contenidos...
+		\end{itemize}
+	
+	\BRitem[Ejemplo negativo:] Familias que quieran adquirir la membresia con integrantes de mas de 10 personas, no cumplen la regla:
+		\begin{itemize}
+			\item Familias con 11 integrantes
+			\item Familias con 15 integrantes
+			contenidos...
+		\end{itemize}
+	
+	\BRitem[Referenciado por:] 
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR3}{Acceso a la sucursal}
+	\BRitem[Tipo:] Regla de integridad referencial o estructural.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Si se desea ingresar a cualquier sucursal, el acceso es único con membresía, si no cuenta con una puede consultar la RB1, de alguna otra forma se reserva el derecho de admisión.
+	\BRitem[Ejemplo positivo:] Aquellos que tengan su membresía, cumplen con la regla:
+		\begin{itemize}
+			\item Presenta su membresía a la recepcionista.
+			\item Presenta su correo a la recepcionista.
+			contenidos...
+		\end{itemize}
+	
+	\BRitem[Ejemplo negativo:] Aquellas personas que no traigan su membresía o no esten registrados en el sistema, no cumplen con la regla:
+		\begin{itemize}
+			\item Presenta correo no registrado
+			\item Presenta membresía vencida por mas de 1 semana.
+			contenidos...
+		\end{itemize}
+	
+	\BRitem[Referenciado por:] 
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR5}{Acceso a Actividades}
+	\BRitem[Tipo:] Regla de integridad referencial o estructural.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] El acceso a cada actividad está sujeto al tipo de membresía con el cual se cuenta o se contrató, no es posible acceder a una actividad que no este referenciada en la membresía contratada a menos que sea pagada de forma individial.
+	\BRitem[Ejemplo positivo:] Cumplen la regla aquellos que en su tipo de membresía les permita a acceder a ciertas actividades:
+		\begin{itemize}
+			\item Membresía Familiar ingresa a las canchas y algunas actividades.
+			 \item Membresía Premium ingresa a todas las actividades de la sucursal.
+		\end{itemize}
+	
+	\BRitem[Ejemplo negativo:] 
+	
+	\BRitem[Referenciado por:] 
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR6}{Adquisición de Membresías}
+	\BRitem[Tipo:] Regla de integridad referencial o estructural.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Un usuario puede tener un único tipo de membresía acorde a sus necesidades.
+	%\BRitem[Sentencia:] $Impuesto(e, s) = Costo(e, s)\cdot0.16$.
+	\BRitem[Ejemplo positivo:] Al conmprar una membresía cumplen la regla:
+		\begin{itemize}
+			\item Personas que cambien de membresía.
+			\item Personas que no tengan membresía.
+		\end{itemize}
+	
+	\BRitem[Ejemplo negativo:] 
+		\begin{itemize}
+			\item Personas que no quieran renovar su membresía y quieran adquirir una doble membresía.
+			\item Personas que no efectuen su pago.
+			
+		\end{itemize}
+	
+	\BRitem[Referenciado por:] 
+\end{BussinesRule}
+
+\begin{BussinesRule}{BR7}{Acceso a personas con retrazos en pagos.}
+	\BRitem[Tipo:] Regla de integridad referencial o estructural.
+				% Otras opciones para tipo: 
+				% - Regla de integridad referencial o estructural. 
+				% - Regla de operación, (calcular o determinar un valor.).
+				% - Regla de inferencia de un hecho.
+	\BRitem[Clase:] Habilitadora. 
+				% Otras opciones para clase: Habilitadora, Cronometrada, Ejecutive.
+	\BRitem[Nivel:] Control. % Otras opciones para nivel: Control, Influencia.
+	\BRitem[Descripción:] Si un cliente no genera su pago par mas de una semana, al ingreso a la sucursal la secretaria indica que debe realizar su pago a la brevedad, tomando en cuenta que el próximo ingreso se le negara.
+	%\BRitem[Sentencia:] $CostoTotal = Costo(e, s) + Impuesto(e, s)$.
+	\BRitem[Ejemplo positivo:] El cliente que no relice su pago, cumplira la regla:
+		\begin{itemize}
+			\item Personas con mas de una semana sin realizar pago no entra a la sucursal.
+			\item Clientes que tengan menos de una semana sin pagar la membresía podrán acceder.
+		\end{itemize}
+	
+	\BRitem[Ejemplo negativo:] 
+		\begin{itemize}
+			\item Personas que si pagen su membresía a tiempo si entran a al sucursal
+		\end{itemize}
+	
+	\BRitem[Referenciado por:] 
+\end{BussinesRule}
+

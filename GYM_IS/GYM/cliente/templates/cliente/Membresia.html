@@ -1,0 +1,138 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MyApp</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href=" {% static 'cliente/styles.css' %} ">
+</head>
+<body>
+<div class="container">
+  <header>
+      <nav  class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href=" {% url  'index'%} " class="navbar-brand">
+              <img src=" {% static 'cliente/Images/logo.svg' %}" alt="Brand"/>
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+              <span class="sr-only">Menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Sucursales</a></li>
+              <li><a href="#">Actividades</a></li>
+              <li class="active"><a href="#">Membresías</a></li>
+              <li><a href="#">Horarios</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{% url 'login' %}">Login</a>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                  Miguel Fernández <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Mi Cuenta</a></li>
+                  <li><a href="#">Mis Cursos</a></li>
+                  <li><a href="#">Mis instructores</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Cerrar sesión</a></li>
+                </ul>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <ul class="nav nav-pills">
+      <li class="active">
+        <a data-toggle="pill" href="#Individual">Individual</a>
+      </li>
+      <li>
+        <a data-toggle="pill" href="#Familiar">Familiar</a>
+      </li>
+      <li>
+        <a data-toggle="pill" href="#Corporativa">Corporativa</a>
+      </li>
+    </ul>
+    <div aria-live="polite" class="slick-list draggable" style="height: 446px;">
+      <div class="tab-content">
+        <div id="Individual" class="tab-pane fade in active">
+          <h2>
+            <span style="color:#ed2127">MEMBRESÍA</span>
+            INDIVIDUAL
+          </h2>
+          <h3>Si eres el único que se animó a inscribirse al gimnasio y cumplir sus propósitos esta membresía es para ti.</h3>
+          <br>
+          <p >Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles que se acomodan a tus necesidades. Con la Membresía Individual tienes acceso ilimitado a todas las áreas y actividades del club, sin restricción de horarios. </p>
+        </div>
+        <div id="Familiar" class="tab-pane fade">
+          <h2>
+            <span style="color:#ed2127">MEMBRESÍA</span>
+            FAMILIAR
+          </h2>
+          <h3>Dale un regalo a la salud de tu familia</h3>
+          <br>
+          <p >
+            Combina diversión con el deporte. En Sports World tenemos lo que necesitas para el acondicionamiento físico de toda la familia, desde los más pequeños hasta los más grandes. </p>
+          <br>
+          • Puedes inscribir hasta 8 familiares.
+          <br>
+          • Los 8 integrantes deben ser únicamente familiares directos del titular.
+          <br>
+          • El horario de esta membresía es de tiempo completo (full time).
+          <br>
+        </div>
+        <div id="Corporativa" class="tab-pane fade">
+          <h2>
+            <span style="color:#ed2127">MEMBRESÍA</span>
+            CORPORATIVA
+          </h2>
+          <h3>Si deseas que tus empleados esten en buena condición y se relajen al realizar actividades fisicas</h3>
+          <br>
+          <p >Sports World te ofrece un espacio único donde podrás realizar diversas actividades de acondicionamiento físico en un ambiente seguro y exclusivo; además de contar con horarios flexibles para que tus
+          empleados puedan asistir en sus tiempos libres y aumenten su productividad.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<footer>
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-sm-1 col-md-2 col-lg-1">
+            <span id="swLogo"></span>
+          </div>
+        <div class="col-sm-11 col-md-10 col-lg-11">
+          <ul class="list-inline">
+            <li><a href="#">Comentarios</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="#">Aviso de Privacidad</a></li>
+            <li><a href="#">Dudas Frecuentes</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--Copyright-->
+    <div class="footer-copyright text-center" style="background-color: #7D0B0B;">
+        © 2018 Copyright: N.I.T.
+    </div>
+    <!--/.Copyright-->
+  </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

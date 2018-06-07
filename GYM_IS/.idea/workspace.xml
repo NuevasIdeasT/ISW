@@ -44,6 +44,9 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GYM/Activities/models.py">
@@ -122,6 +125,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> Luis_Eduardo
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -432,9 +436,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+<<<<<<< HEAD
+          <folding />
+=======
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+>>>>>>> Luis_Eduardo
         </state>
       </provider>
     </entry>
@@ -450,6 +458,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <folding />
+=======
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+>>>>>>> Luis_Eduardo
+=======
+>>>>>>> Luis_Eduardo
         </state>
       </provider>
     </entry>
@@ -457,6 +475,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <folding />
+=======
+          <folding>
+            <element signature="e#637#678#0" expanded="true" />
+          </folding>
+>>>>>>> Luis_Eduardo
+=======
+>>>>>>> Luis_Eduardo
         </state>
       </provider>
     </entry>
@@ -470,11 +498,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GYM/Activities/views.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="102">
+          <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+          <folding />
+=======
+        <state relative-caret-position="68">
+=======
+        <state relative-caret-position="102">
+>>>>>>> Luis_Eduardo
           <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+>>>>>>> Luis_Eduardo
         </state>
       </provider>
     </entry>
@@ -482,13 +520,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <folding />
+=======
+          <folding>
+            <element signature="e#637#678#0" expanded="true" />
+          </folding>
+>>>>>>> Luis_Eduardo
+=======
+>>>>>>> Luis_Eduardo
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GYM/Activities/url.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="85">
           <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+=======
+        <state relative-caret-position="68">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+>>>>>>> Luis_Eduardo
+=======
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+>>>>>>> Luis_Eduardo
         </state>
       </provider>
     </entry>

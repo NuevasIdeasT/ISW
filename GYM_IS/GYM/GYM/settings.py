@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
+    'Activities',
+    'cliente',
+=======
     'Activities.apps.ActivitiesConfig',
+>>>>>>> Luis_Eduardo
 ]
 
 MIDDLEWARE = [
@@ -55,7 +60,9 @@ ROOT_URLCONF = 'GYM.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'cliente/templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
