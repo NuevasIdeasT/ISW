@@ -29,7 +29,7 @@ def Inicio(request):
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password)
-    cliente = Cliente.objects.get_object_or_404(nombre=user.first_name)
+    #cliente = Cliente.objects.get_object_or_404(nombre=user.first_name)
     if user is not None:
         # Correct password, and the user is marked "active"
         login(request, user)
