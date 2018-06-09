@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Presentaci\IeC {\'o}n}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Organizaci\IeC {\'o}n del contenido}{1}{section.1.2}
@@ -24,6 +24,7 @@
 \contentsline {subsection}{\numberline {3.3.8}Entidad: Venta}{14}{subsection.3.3.8}
 \contentsline {subsection}{\numberline {3.3.9}Entidad: Actividad}{14}{subsection.3.3.9}
 \contentsline {subsection}{\numberline {3.3.10}Entidad: Area}{15}{subsection.3.3.10}
+<<<<<<< HEAD
 \contentsline {chapter}{\numberline {4}Modelo din\IeC {\'a}mico}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Descripci\IeC {\'o}n de actores}{17}{section.4.1}
 \contentsline {section}{\numberline {4.2}CU1 Iniciar sesi\IeC {\'o}n de jefe de inmobiliario}{20}{section.4.2}
@@ -90,3 +91,60 @@
 \contentsline {subsection}{\numberline {4.16.1}Gui\IeC {\'o}n de prueba 1}{45}{subsection.4.16.1}
 \contentsline {subsection}{\numberline {4.16.2}Gui\IeC {\'o}n de prueba 2}{46}{subsection.4.16.2}
 \contentsline {subsection}{\numberline {4.16.3}Gui\IeC {\'o}n de prueba 3}{46}{subsection.4.16.3}
+=======
+\contentsline {section}{\numberline {3.4}Modelado de Reglas de negocio}{15}{section.3.4}
+\contentsline {section}{\numberline {3.5}Modelo de Procesos AS-IS}{17}{section.3.5}
+\contentsline {section}{\numberline {3.6}Modelo de procesos TO-BE}{19}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}PROCM-01 ...}{19}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Modelo din\IeC {\'a}mico}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Descripci\IeC {\'o}n de actores}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}CU1 Iniciar sesi\IeC {\'o}n de jefe de inmobiliario}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Descripci\IeC {\'o}n completa}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Atributos importantes}{24}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Trayectorias del Caso de Uso}{24}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Puntos de extensi\IeC {\'o}n}{25}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}CU2 Consultar Actividades de sucursal}{26}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Descripci\IeC {\'o}n completa}{26}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Atributos importantes}{26}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Trayectorias del Caso de Uso}{26}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Puntos de extensi\IeC {\'o}n}{27}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}CU3 Modificar actividad de sucursal}{28}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Descripci\IeC {\'o}n completa}{28}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Atributos importantes}{28}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Trayectorias del Caso de Uso}{28}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}CU4 Ver actividad de sucursal}{30}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Descripci\IeC {\'o}n completa}{30}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Atributos importantes}{30}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Trayectorias del Caso de Uso}{30}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Puntos de extensi\IeC {\'o}n}{30}{subsection.4.5.4}
+\contentsline {section}{\numberline {4.6}CU5 Agregar actividad a la sucursal}{32}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Descripci\IeC {\'o}n completa}{32}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Atributos importantes}{32}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}Trayectorias del Caso de Uso}{32}{subsection.4.6.3}
+\contentsline {subsection}{\numberline {4.6.4}Puntos de extensi\IeC {\'o}n}{33}{subsection.4.6.4}
+<<<<<<< HEAD
+\contentsline {section}{\numberline {4.7}CU22 Iniciar sesi\IeC {\'o}n cliente gimnasio}{34}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Descripci\IeC {\'o}n completa}{34}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Atributos importantes}{34}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Trayectorias del Caso de Uso}{34}{subsection.4.7.3}
+\contentsline {section}{\numberline {4.8}CU17 Consultar instructores de actividades.}{36}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Descripci\IeC {\'o}n completa}{36}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Atributos importantes}{36}{subsection.4.8.2}
+\contentsline {subsection}{\numberline {4.8.3}Trayectorias del Caso de Uso}{36}{subsection.4.8.3}
+\contentsline {section}{\numberline {4.9}CU23 Inscribir actividad}{37}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Descripci\IeC {\'o}n completa}{37}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Atributos importantes}{37}{subsection.4.9.2}
+\contentsline {subsection}{\numberline {4.9.3}Trayectorias del Caso de Uso}{37}{subsection.4.9.3}
+\contentsline {section}{\numberline {4.10}CU25 Calificar Actividad.}{38}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Descripci\IeC {\'o}n completa}{38}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Atributos importantes}{38}{subsection.4.10.2}
+\contentsline {subsection}{\numberline {4.10.3}Trayectorias del Caso de Uso}{38}{subsection.4.10.3}
+\contentsline {section}{\numberline {4.11}Gui\IeC {\'o}n de Pruebas}{39}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Gui\IeC {\'o}n de prueba 1}{39}{subsection.4.11.1}
+=======
+\contentsline {section}{\numberline {4.7}Gui\IeC {\'o}n de Pruebas}{33}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Gui\IeC {\'o}n de prueba 1}{33}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Gui\IeC {\'o}n de prueba 2}{34}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Gui\IeC {\'o}n de prueba 2}{35}{subsection.4.7.3}
+>>>>>>> 9f9a7873d393d15ef2e51ed82dfdb98c90dd4493
+>>>>>>> 0eff6495fec5e6e8df531b40918ac1ccee0f67e3
