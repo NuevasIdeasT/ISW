@@ -1,0 +1,221 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+
+\begin{itemize}
+\item \textbf{ID}: CP 35
+\item \textbf{ALCANCE}: CU35
+\item \textbf{NOMBRE}: Registrar Instructor
+\item \textbf{PREPARACIÓN}:\\
+		-El Gerente tiene que tener una sesión iniciada.
+		-Debe existir al menos una Actividad Registradaen la DB.
+\begin{itemize}
+\item \textbf{CP 1}:
+\item \textbf{DATOS DE ENTRADA}:\\
+-Luis Quiroz\\
+-Record 56, Col. portales,CDMX.\\
+-LuisQ\\
+-12345678\\
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 1\\
+			PASOS\\
+			\hline 1.- Se selecciona el boton ''Agregar Instructor''\\
+			\hline 2.- Se instroduce ''Luis Quiroz'' en el campo  Nombre Completo.\\
+			\hline 3.- Se instroduce ''Record 56, Col. portales,CDMX.'' en el campo  Dirección.\\
+			\hline 4-. Se introduce  ''LuisQ'' en el campo Nombre de Usuario.\\
+			\hline 5-. Se introduce  12345678  en el campo Password.\\
+            \hline 6.-Se da clic en el botón ''Nueva Actividad''\\
+            \hline 7-.Se selecciona la actividad ''Pesas''\\
+            \hline 8.-Se da clic en el botón ''Guardar''.\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}: Redirección a la pantalla \IUref{IU3}{Editar Instructor} y aparece la leyenda \textbf{Registro Exitoso}.
+\end{itemize}
+\begin{itemize}
+\item \textbf{CP 2}:
+\item \textbf{DATOS DE ENTRADA}:\\
+-LuisQU\\
+-12345678\\
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 2\\
+			PASOS\\
+			\hline 1.- Se selecciona el boton ''Agregar Instructor''\\
+			\hline 4-. Se introduce  ''LuisQU'' en el campo Nombre de Usuario.\\
+			\hline 5-. Se introduce  12345678  en el campo Password.\\
+            \hline 6.-Se da clic en el botón ''Nueva Actividad''\\
+            \hline 7-.Se selecciona la actividad ''Pesas''\\
+            \hline 8.-Se da clic en el botón ''Guardar''.\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}:Aparece en el campo 'Nombre Completo' la leyenda \textbf{Nombre Invalido} y en el campo 'Dirección' la leyenda \textbf{Dirección Invalida} .
+\end{itemize}
+\end{itemize}
+%------------------------------------------------------
+
+\begin{itemize}
+\item \textbf{ID}: CP 36
+\item \textbf{ALCANCE}: CU 36
+\item \textbf{NOMBRE}: Modificar Instructor
+\item \textbf{PREPARACIÓN}:\\
+		-El Gerente tiene que tener una sesión iniciada.
+		-Debe existir al menos una Actividad Registrada en la DB.
+		-Debe existir al menos un Instructor Registrada en la DB.
+\begin{itemize}
+\item \textbf{CP 1}:
+\item \textbf{DATOS DE ENTRADA}:\\
+-Selección Instructor "Daniel Romero"
+-Daniel Romero Lopez
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 1\\
+			PASOS\\
+			\hline 1.- Se selecciona el boton de edición\\
+			\hline 2.- Se despliega la pantalla con los datos del instructror.\\
+			\hline 3.- Se introduce en el campo de nombre la cadena ''Daniel Romero Lopez''.\\
+			\hline 4-. Se selecciona la actividad ''Pesas''\\
+			\hline 5-. Se selecciona el horario '''8:00-9:00''\\
+            \hline 6.-Se da clic en el botón ''Guardar''\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}: Redirección a la pantalla \IUref{IU3}{Instructor} y aparece la leyenda ''Daniel Romero Lopez ha actualizado con éxito''
+\end{itemize}
+\begin{itemize}
+\item \textbf{CP 2}:
+\item \textbf{DATOS DE ENTRADA}:\\
+-Selección Instructor "Daniel Romero"
+-Daniel Romero Lopez
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 2\\
+			PASOS\\
+			\hline 1.- Se selecciona el boton de edición\\
+			\hline 2.- Se despliega la pantalla con los datos del instructror.\\
+			\hline 3.- Se introduce en el campo de nombre la cadena ''Daniel Romero Lopez''.\\
+			\hline 4-. Se borra el campo 'Dirección'\\
+			\hline 4-. Se selecciona la actividad ''Pesas''\\
+			\hline 5-. Se selecciona el horario '''8:00-9:00''\\
+            \hline 6.-Se da clic en el botón ''Guardar''\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}:Aparece en el campo 'Dirección' la leyenda \textbf{Campo Requerido}.
+\end{itemize}
+\end{itemize}
+%------------------------------------------------------
+
+\begin{itemize}
+\item \textbf{ID}: CP 37
+\item \textbf{ALCANCE}: CU 37
+\item \textbf{NOMBRE}: Eliminar Instructor
+\item \textbf{PREPARACIÓN}:\\
+		-El Gerente tiene que tener una sesión iniciada.\\
+		-Debe existir al menos un Instructor Registrada en la DB.
+\begin{itemize}
+\item \textbf{CP 1}:
+\item \textbf{DATOS DE ENTRADA}:\\
+-Selección Instructor "Daniel Romero"
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 1\\
+			PASOS\\
+			\hline 1.- Se selecciona el boton de ''eliminar''\\
+			\hline 2.- Se despliega una alerta con la leyenda ''seguro que deas eliminar al instructor''\\ y las opciones ''Aceptar'' y ''Cancelar''.\\
+			\hline 3.- Se selcciona la opción ''Aceptar''\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}: Redirección a la pantalla \IUref{IU3}{Instructor} y aparece la leyenda ''Borrado exitoso'' y ya no se aprecia en la tabla al instructor borrado.
+\end{itemize}
+\begin{itemize}
+\item \textbf{CP 2}:
+\item \textbf{DATOS DE ENTRADA}:\\
+-Selección Instructor "Daniel Romero"
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 2\\
+			PASOS\\
+			\hline 1.- Se selecciona el boton de ''eliminar''\\
+			\hline 2.- Se despliega una alerta con la leyenda ''seguro que deas eliminar al instructor'\\' y las opciones ''Aceptar'' y ''Cancelar''.\\
+			\hline 3.- Se selcciona la opción ''Cancelar''\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}:Se muestra la pantalla \IUref{IU3}{Instructor} sin  ningún cambio.
+\end{itemize}
+\end{itemize}
+%------------------------------------------------------
+
+\begin{itemize}
+\item \textbf{ID}: CP 38
+\item \textbf{ALCANCE}: CU 38
+\item \textbf{NOMBRE}: Asignar Actividad al Instructor
+\item \textbf{PREPARACIÓN}:\\
+		-El Gerente tiene que tener una sesión iniciada.\\
+		-Debe existir al menos un Instructor Registrada en la DB.
+		-Debe existir al menos una Acttividad Registrada en la DB.
+		-Se debe haber seleccionado una Actividad.
+\begin{itemize}
+\item \textbf{CP 1}:
+\item \textbf{DATOS DE ENTRADA}:\\
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 1\\
+			PASOS\\
+			\hline 1.- Se Despliegan los horarios disponibles\\
+			\hline 2.- Se selecciona el horario 8:00-9:00\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}: Se aprecia en la pantalla que se asigno el horario seleccionado.
+\end{itemize}
+\begin{itemize}
+\item \textbf{CP 2}:
+\item \textbf{DATOS DE ENTRADA}:\\
+-Selección Instructor "Daniel Romero"
+	\begin{center}			
+	\begin{tabular}{||l|l|l|l||}
+		\hline
+		\hline
+			CP 2\\
+			PASOS\\
+			\hline 1.- Se Despliegan los horarios disponibles\\
+        \hline
+		\hline
+	\end{tabular}
+	\end{center}
+\item \textbf{SALIDAS}:Se muestra la pantalla \IUref{IU3}{Instructor} la leyenda \textbf{Se debe seleccionar al menos un horario}.
+\end{itemize}
+\end{itemize}
+%------------------------------------------------------
+

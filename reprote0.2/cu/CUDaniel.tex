@@ -1,0 +1,181 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{CUX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU17}{Consultar instructores de actividades.}{
+		El cliente desde su inicio de sesión puede ver ir a una pantalla con una lista de  instructores que tiene asignado de acuerdo a las actividades en las que esta registrado.
+	}
+		\UCitem{Versión}{\color{Gray}0.2}
+		\UCitem{Autor}{\color{Gray}Daniel.}
+		\UCitem{Supervisa}{\color{Gray}Luis.}
+		\UCitem{Actor}{\hyperlink{Cliente}{Cliente}}
+		\UCitem{Propósito}{Que el cliente pueda conocer quienes son los instructores de las actividades a las que asiste y posteriormente poder calificarlos.}
+		\UCitem{Entradas}{nombre de Instructor}
+		\UCitem{Origen}{Mouse del cliente.}
+		\UCitem{Salidas}{Nombre instructor,actividad, sucursal, calificación.}
+		\UCitem{Destino}{Pantalla del cliente.}
+		\UCitem{Precondiciones}{Que el cliente haya iniciado sesión, que el cliente tenga alguna actividad inscrita.}
+		\UCitem{Postcondiciones}{}
+		\UCitem{Errores}{Que el cliente no tenga ninguna actividad inscrita.}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{Los instructores serán mostrados de la siguiente manera:Nombre,edad, Clase, Sucursal,Calificación.}
+	\end{UseCase}
+%--------------------------------------
+ observaciones
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] desde la pantalla de inicio presionara el botón de "mis Instructores".
+		\UCpaso muestra la pantalla de los instructores.
+		\UCpaso mostrara a los instructores en una tabla de acuerdo a como se especifica en las observaciones.
+	\end{UCtrayectoria}
+
+
+		
+		
+%-------------------------------------- TERMINA descripción del caso de uso.
+
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{CUX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU22}{Iniciar sesión cliente gimnasio}{
+		Permite  al cliente del gimnasio autenticarse en el sistema mediante correo y su contraseña para poder ingresar a su cuenta.
+	}
+		\UCitem{Versión}{\color{Gray}0.2}
+		\UCitem{Autor}{\color{Gray}Daniel.}
+		\UCitem{Supervisa}{\color{Gray}Luis.}
+		\UCitem{Actor}{\hyperlink{Cliente}{Cliente}}
+		\UCitem{Propósito}{Que el cliente pueda pueda acceder a su información, actividades que tiene inscritas o para poder inscribir alguna y ver sus instructores.}
+		\UCitem{Entradas}{Correo electrónico, contraseña}
+		\UCitem{Origen}{El actor mediante el teclado ingresara los datos mencionados}
+		\UCitem{Salidas}{Nombre completo, Dirección, Calle, No. int, No. Ext. Col. Del./Mun. C.P, Peso, Enfermedades, Alergias, Tipo de sangre, Medicamentos.}
+		\UCitem{Destino}{Pantalla del cliente.}
+		\UCitem{Precondiciones}{Que el cliente este registrado en el sistema, que no haya una sesión ya activa.}
+		\UCitem{Postcondiciones}{El cliente va ver su pantalla de inicio.}
+		\UCitem{Errores}{Que el correo sea incorrecto, que la contraseña sea errónea, que no este registrado.}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{Este caso de uso tendrá pestañas adicionales para ver sus actividades, horarios e instructores que tiene a demás de poder inscribir actividad. A grandes rasgos este C.U. solo muestra los datos personales del cliente del gimnasio.}
+	\end{UseCase}
+%--------------------------------------
+
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Ingresa su correo.  %\IUref{IU23}{Pantalla de Control de Acceso}\label{CU17Login}.
+		\UCpaso[\UCactor] Ingresa su contraseña.%\BRref{BR129}{Determinar si un Estudiante puede inscribir Seminario.} \Trayref{A}.
+		\UCpaso[\UCactor] Da clic en el botón de iniciar sesión\Trayref{A}\label{CU15ValidarQR}.  %\IUref{IU32}{Pantalla de Selección de Seminario}
+		\UCpaso valida que el usuario y contraseña son correctas para iniciar sesión. 
+		\UCpaso mostrara el nombre completo, su direccion y los datos medicos..% \BRref{BR130}{Determinar si un Estudiante puede inscribirse en un Seminario} \Trayref{C}.
+		\UCpaso  mostrara en el menu superior el nombre del usuario y una lista deplegable ahi mismo con la opción de ver cursos, ver instructores y cerrrar sesión.\Trayref{C}\label{CU15RealizarPago}. %\BRref{BR143}{Validar el horario del estudiante} \Trayref{D}.		
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+
+
+%--------------------------------------
+% Puntos de extensión
+%\subsection{Puntos de extensión}
+%\UCExtenssionPoint{
+	% Cuando:
+%	Desea conocer las materias cursadas.
+%}{
+	% Durante la región:
+%	Del paso 4 al paso 9.
+%}{
+	% Casos de uso a los que extiende:
+%	\hyperlink{CU3.4}{CU3.4 Consultar historial académico}.
+%}
+		
+		
+		
+%-------------------------------------- TERMINA descripción del caso de uso.
+
+
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU23}{Inscribir actividad}{
+		Permite  al cliente poder inscribirse en una actividad que se imparte en una sucursal.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Daniel}
+		\UCitem{Supervisa}{\color{Gray}Luis}
+		\UCitem{Actor}{\hyperlink{Cliente}{Cliente}}
+		\UCitem{Propósito}{Que el usuario pueda ir a la actividad sin que le nieguen el acceso y conozca el horario en el que debe asistir.}
+		\UCitem{Entradas}{Nombre Actividad, Sucursal, horario}
+		\UCitem{Origen}{Teclado}
+		\UCitem{Salidas}{Mensaje,Nombre Actividad,Sucursal,horario}
+		\UCitem{Destino}{Pantalla del cliente}
+		\UCitem{Precondiciones}{ Que el cliente haya iniciado sesión, que exista la actividades que se desea inscribir, que haya cupo en la actividad deseada.}
+		\UCitem{Postcondiciones}{El cliente vera la actividad inscrita en su lista de actividades.}
+		\UCitem{Errores}{No haya cupo en la actividad por inscribir}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Desde la pantalla donde termina el CU22 seleccionar el botón de inscribir actividad.
+		\UCpaso Muestra la pantalla de inscribir actividad.
+		\UCpaso Muestra los campos que se deberán llenar para inscribir la actividad.
+		\UCpaso[\UCactor] llena los campos y dar clic en inscribir.
+		\UCpaso[\UCactor] confirma la operación oprimiendo el botón de aceptar. 
+		\UCpaso Valida que la actividad y el horario que el usuario eligió exista.
+		\UCpaso Valida que haya cupo en la actividad que eligió el usuario.
+		\UCpaso Despliega msg3 "Actividad inscrita".
+		\UCpaso Muestra la pantalla de inicio de cliente.	
+	\end{UCtrayectoria}
+%-------------------------------------- TERMINA descripción del caso de uso.
+
+
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU25}{Calificar Actividad.}{
+		El cliente selecciona una puntuación para la actividad en un intervalo del 1 al 5 y se quedara guardada.
+	}
+	\UCitem{Versión}{\color{Gray}0.1}
+	\UCitem{Autor}{\color{Gray}Daniel}
+	\UCitem{Supervisa}{\color{Gray}Luis}
+	\UCitem{Actor}{\hyperlink{Cliente}{Cliente}}
+	\UCitem{Propósito}{ Que el cliente pueda transmitir una retro alimentación para el gimnasio y que pueda tener un mejor servicio. }
+	\UCitem{Entradas}{Nombre Actividad, Calificación, Comentario }
+	\UCitem{Origen}{Mouse y teclado.}
+	\UCitem{Salidas}{Mensaje, Calificación}
+	\UCitem{Destino}{Pantalla del cliente}
+	\UCitem{Precondiciones}{ Que el cliente haya iniciado sesión, que este inscrito a alguna actividad.}
+	\UCitem{Postcondiciones}{Que el cliente no este inscrito en la actividad que quiere calificar,que no exista la actividad que quiere calificar el cliente, que el cliente califique fuera del rango permitido.}
+	\UCitem{Errores}{}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+%--------------------------------------
+
+\begin{UCtrayectoria}{Principal}
+	\UCpaso[\UCactor] Desde la pantalla donde termina el CU22 seleccionar el botón de Actividades.
+	\UCpaso[\UCactor] Selecciona el botón de calificar actividad.
+	\UCpaso Despliega los campos a llenar para calificar una actividad en la misma pantalla.
+	\UCpaso[\UCactor] Selecciona una actividad
+	\UCpaso[\UCactor] Asigna una calificación y un comentario que sera de manera opcional.
+	\UCpaso[\UCactor] Confirma la operación oprimiendo el botón de "aceptar"..
+	\UCpaso Valida que la actividad que seleccionó el usuario exista y que este inscrito en esa actividad.
+	\UCpaso Mustra MSG4 "Calificación hecha" y la calificación de la actividad.
+	
+\end{UCtrayectoria}
+
+%-------------------------------------- TERMINA descripción del caso de uso.
+
+
+
+%\begin{figure}[htbp]
+%	\begin{center}
+%		\includegraphics[width=.8\textwidth]{images/vistas/buscarcliente}
+%		\caption{Buscar cliente}
+%		\label{fig:Ventas}
+%	\end{center}
+%\end{figure}
