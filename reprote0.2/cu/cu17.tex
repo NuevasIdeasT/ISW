@@ -12,7 +12,7 @@
 %--------------------------------------
 	\begin{UseCase}{CU1}{Iniciar sesión de jefe de inmobiliario}{
 	
-		Validar al jefe de inmobiliario para que pueda tener acceso a la información de la sucursal.
+		Validar al jefe de inmobiliario para que pueda tener acceso a la información de la sucursal, modificar o eliminar datos a través del sistema.
 	}
 		\UCitem{Versión}{\color{Gray}0.4}
 		\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martínez}
@@ -39,7 +39,7 @@
 
 %--------------------------------------		
 		\begin{UCtrayectoriaA}{A}{El nombre de sesión no existe}
-			\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG1-}``El empleado [{\em Nombre de sesión}] no existe.''.
+			\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG1-}``El empleado [{\em Nombre de usuario}] no existe.''.
 			\UCpaso[\UCactor] Introduce nombre usuario correcto.
 			\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
 		\end{UCtrayectoriaA}

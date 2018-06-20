@@ -22,16 +22,17 @@
 	% Ejemplo de un término de entidad
 	%\item[\hypertarget{tCliente}{Cliente:}] Se refiere a todas las personas físicas y morales que \hyperlink{tRenta}{rentan} o han rentado un \hyperlink{tVehiculo}{vehículo}.
 	
-	\item[\hypertarget{tDirector}{Director:}] ({\em es un tipo de \hyperlink{tEmpleado}{Empleado}}) Es el empleado que tiene mayor rango de todos y no tiene superior, a diferencia de los demás.	
+	\item[\hypertarget{tJefe}{Jefe de Inmobiliario:}] ({\em es un tipo de \hyperlink{tEmpleado}{Empleado}}) Es el empleado que tiene mayor rango de todos y no tiene superior, a diferencia de los demás.	
+	\item[\hypertarget{tEmpleado}{Empleado:}] Se refiere a cualquier persona que labore en la empresa.
+	
+	\item[\hypertarget{tGerente}{Gerente de Inmobiliario:}] ({\em es un tipo de \hyperlink{tEmpleado}{Empleado}}) Es el empleado que tiene mayor rango dentro de la sucursal en la que trabaja.	
 	\item[\hypertarget{tEmpleado}{Empleado:}] Se refiere a cualquier persona que labore en la empresa.
 	 
-	\item[\hypertarget{tChecador}{Checador:}] ({\em Reloj asociado al atributo:} Hora de entrada y salida de un \hyperlink{tEmpleado}{empleado}. {\em Frecuencia de lectura:} Una vez al día para la entrada y otra para la salida durante los días laborales.
+	\item[\hypertarget{tcliente}{Cliente:}] {\em Es el aquel que adquirió una membresía}.
 	
-	\item[\hypertarget{tMotocicleta}{Motocicleta:}] ({\em es un tipo de {tVehiculo}{Vehículo}}) De dos ruedas con capacidad para una personas. 
+	\item[\hypertarget{tInvitado}{Invitado:}] {\em es un tipo de usuario que tiene adquirido algun servicio con el consorcio, pero no tiene una membresía adquirida.} 
 
-	\item[\hypertarget{tRenta}{Renta:}] Se refiere al servicio que ofrece la empresa para prestar \hyperlink{tVehiculo}{vehículos} a los \hyperlink{tCliente}{clientes} por un tiempo definido.
 	
-	\item[\hypertarget{tVehiculo}{Vehiculo:}] Se refiere a los automóviles y motocicletas que la empresa usa para dar el servicio de renta a los \hyperlink{tCliente}{clientes}.
 	
 %	\brTermSensor{tVelocimetro}{Velocímetro:}{Velocidad de un Vehículo.}{Kilometros/hora.}{Constantemente siempre que el \cdtRef{tVehiculo}{vehículo} esté encendido.}
 \end{description}
@@ -48,7 +49,7 @@
 	
 \begin{figure}[htbp!]
 	\begin{center}
-		\includegraphics[angle=90,width=.95\textwidth]{images/modeloDelDominioDelProblema1}
+		\includegraphics[angle=90,width=.95\textwidth]{images/BD/bd1}
 		\caption{Modelo del dominio del problema parte 1}
 		\label{fig:modeloDeDominio}
 	\end{center}
@@ -56,12 +57,27 @@
 
 \begin{figure}[htbp!]
 	\begin{center}
-		\includegraphics[angle=90,width=.95\textwidth]{images/modeloDelDominioDelProblema2}
-		\caption{Modelo del dominio del problema parte 1}
+		\includegraphics[angle=90,width=.5\textwidth]{images/BD/bd2}
+		\caption{Modelo del dominio del problema parte 2}
 		\label{fig:modeloDeDominio}
 	\end{center}
 \end{figure}
 
+\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[angle=90,width=.95\textwidth]{images/BD/bd3}
+		\caption{Modelo del dominio del problema parte 3}
+		
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\includegraphics[angle=90,width=.7\textwidth]{images/BD/bd4}
+		\caption{Modelo del dominio del problema parte 4}
+		
+	\end{center}
+\end{figure}
 %- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 \newenvironment{cdtEntidad}[2]{%
@@ -251,37 +267,66 @@
 	\brRel{\brRelComposition}{Sucursal}{Un \hyperlink{Area}{Area} pertenece a una \hyperlink{Sucursal}{Sucursal}}	
 	\end{cdtEntidad}
 	
-	%---------------------------------------------------------
-\section{Modelado de Reglas de negocio}
-
-\input{3-1-reglas}
-
-%---------------------------------------------------------
-\section{Modelo de Procesos AS-IS}
-
-En esta sección se describen los procesos a mejorar con el sistema.
-
-%%%%\input{proc/proc01.tex}
-%%%%\input{proc/proc02.tex}
-%\input{proc/proc03.tex}
-%\input{proc/proc04.tex}
-
-%---------------------------------------------------------
-\section{Modelo de procesos TO-BE}
-
-Los nuevos procesos se presentan en esta sección, el mapa de procesos de se muestra en la figura~\ref{fig:mapaProc}.
+	%---------------------------------------------------------sa
+	
+	
+	\section{Modelo de procesos}
+	
+	Los nuevos procesos se presentan en esta sección.
+	
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=1.1\textwidth]{images/Procesos/agregarActividadSucursal}
+			\caption{Agregar Actividad a Sucursal}
+		\end{center}
+	\end{figure}
 
 \begin{figure}[htbp]
 	\begin{center}
-		\includegraphics[width=.8\textwidth]{images/mapaProc}
-		\caption{Mapa de procesos}
-		\label{fig:mapaProc}
+		\includegraphics[width=1.1\textwidth]{images/Procesos/IngresarSucursal}
+		\caption{Ingreso a la sucursal}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=1.1\textwidth]{images/Procesos/registrarCliente}
+		\caption{Registrar cliente}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=1.1\textwidth]{images/Procesos/ReponerTarjetaAcceso}
+		\caption{Reposicion de Tarjeta}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=1.1\textwidth]{images/Procesos/VenderActividadCliente}
+		\caption{Vender Actividad}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=1.1\textwidth]{images/Procesos/VenderActividadInvitado}
+		\caption{Agregar Actividad a Invitado}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=1.1\textwidth]{images/Procesos/VenderMembresia}
+		\caption{Vender Membresía}
 	\end{center}
 \end{figure}
 
 
-\input{proc/proc-m01.tex}
-%\input{proc/proc-m02.tex}
-%\input{proc/proc-m03.tex}
-%\input{proc/proc-m04.tex}
+
+
+
+
+
 

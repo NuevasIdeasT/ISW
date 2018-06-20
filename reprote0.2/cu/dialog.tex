@@ -10,12 +10,16 @@
 \item CP 1:
 \item DATOS DE ENTRADA:\\
 <<<<<<< HEAD
+	-Correo electrónico del J.I: Jefe\_inmobiliario$@$hotmail.com\\
+=======
+<<<<<<< HEAD
 	\begin{itemize}
 		\item Correo electrónico del J.I: Jefe\_inmobiliario\@hotmail.com
 		\item Contraseña: SOY\_elJefe1
 	\end{itemize}
 =======
 	-Correo electrónico del J.I: Jefe\_inmobiliario$@$hotmail.com
+>>>>>>> 0eff6495fec5e6e8df531b40918ac1ccee0f67e3
 	-Contraseña: SOY\_elJefe1
 >>>>>>> 9f9a7873d393d15ef2e51ed82dfdb98c90dd4493
 \begin{center}			
@@ -87,9 +91,9 @@
 	\item ALCANCE: \UCref{CU2}
 	\item NOMBRE: Consultar Actividades de sucursal  
 	\item PREPARACIÓN:\\
-	-En la BD debe de estar registrado el jefe de inmobiliario.
-	-En la BD debe de estar registrado al menos una actividad.
-	-En la BD debe de estar registrado al menos una sucursal.
+	-En la BD debe de estar registrado el jefe de inmobiliario.\\
+	-En la BD debe de estar registrado al menos una actividad.\\
+	-En la BD debe de estar registrado al menos una sucursal.\\
 	\item CP 1:
 	\item DATOS DE ENTRADA:\\
 	-
@@ -108,18 +112,24 @@
 \end{itemize}
 
 %%%para otro caso de uso%%%%%%
-\subsection{Guión de prueba 2}
+\subsection{Guión de prueba 3}
 \begin{itemize}
-	\item ID: Guión 02
+	\item ID: Guión 03
 	\item ALCANCE: \UCref{CU3}
 	\item NOMBRE: Modificar actividad de sucursal 
 	\item PREPARACIÓN:\\
-	-En la BD debe de estar registrado el jefe de inmobiliario.
-	-En la BD debe de estar registrado al menos una actividad.
-	-En la BD debe de estar registrado al menos una sucursal.
+	-En la BD debe de estar registrado el jefe de inmobiliario.\\
+	-En la BD debe de estar registrado al menos una actividad.\\
+	-En la BD debe de estar registrado al menos una sucursal.\\
+	-En la BD debe de estar registrado el instructor con el que se harán las pruebas.\\
+	-En la BD debe estar llenos todos los campos de esa pagina.\\
 	\item CP 1:
 	\item DATOS DE ENTRADA:\\
-	-
+	-Nombre de Actividad: Natación\\
+	-hora(s): lunes-13:00, miercoles-13:00, jueves-13:00, viernes-13:00, domingo-13:00\\
+	-Instructor: Juanito perez\\
+	-Fotografia: foto png\\
+	-Descripción: Natación es una disciplina...
 	\begin{center}			
 		\begin{tabular}{|l|l|l|l|}
 			\hline
@@ -127,9 +137,41 @@
 			PASOS\\
 			\hline 1.- Inicia sesión del jefe de inmobiliario.\\
 			\hline 2.- Precionar el botón de actividades.\\
+			\hline 3.- Precionar el botón de editar.\\
+			\hline 4.- Borrar los datos que se van a modificar.\\
+			\hline 5.- Escribir el  nombre de la actividad.\\
+			\hline 6.- Escribir en la casilla correspondiente la hora en la tabla de dias de la semana.\\
+			\hline 7.- Escribir la descripción.\\
+			\hline 8.- Presionar el botón de aceptar.\\
 			\hline
 		\end{tabular}
 	\end{center}
-	\item SALIDAS: \IUref{IU2}{ Pantalla de Actividades.}\label{CU1LoginJI}
+	\item SALIDAS: Mensaje {\bf MSG5-}``Operación éxitosa.''.
+	
+	\item CP 2:
+	\item DATOS DE ENTRADA:\\
+	-Nombre de Actividad: Natación\\
+	-hora(s): lunes-una hrs, miercoles-una hrs, jueves-una hrs, viernes-una hrs, domingo-una hrs\\
+	-Instructor: Juanito perez\\
+	-Fotografia: foto png\\
+	-Descripción: Natación es una disciplina...
+	\begin{center}			
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			CP 1\\
+			PASOS\\
+			\hline 1.- Inicia sesión del jefe de inmobiliario.\\
+			\hline 2.- Precionar el botón de actividades.\\
+			\hline 3.- Precionar el botón de editar.\\
+			\hline 4.- Borrar los datos que se van a modificar.\\
+			\hline 5.- Escribir el  nombre de la actividad.\\
+			\hline 6.- Escribir en la casilla correspondiente la hora en la tabla
+			de dias de la semana.\\
+			\hline 7.- Escribir la descripción.\\
+			\hline 8.- Presionar el botón de aceptar.\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\item SALIDAS: Mensaje {\bf MSG5-}``La fecha debe ser 0:00-24:00.''.
 	
 \end{itemize}

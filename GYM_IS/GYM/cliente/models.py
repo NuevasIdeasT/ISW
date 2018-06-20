@@ -12,12 +12,14 @@ parametro (longitud,tipo,etc.)"""
 
 class Cliente(models.Model):
     """Modelo de cliente aqui definimos los atributos y relaciones que tendra nuestros clientes."""
-
-    nombre_de_usuario = models.CharField('Nombre de usuario', max_length=20,unique=True,null=True)
-    contrasenia = models.CharField('Contrasenia del cliente', max_length=16,null=True)
+    #ID_usuario = models.AutoField('ID del usuario')
+    nombre_de_usuario = models.CharField(
+        'Nombre de usuario', max_length=20, unique=True, null=True)
+    contrasenia = models.CharField(
+        'Contrasenia del cliente', max_length=16, null=True)
     nombre = models.CharField('Nombre del cliente', max_length=50)
     domicilio = models.TextField('direccion del cliente')
-    correo = models.CharField('Correo', max_length=30)
+    correo = models.EmailField('Correo')
     telefono = models.CharField('Telefono', max_length=10)
     numero_emergencia = models.CharField(
         'Numero de emergencia', max_length=10, blank=True)

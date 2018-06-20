@@ -1,0 +1,407 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{CUX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU10}{Recepcionista inscribe actividad}{
+		La recepcionista con el correo del cliente seleciona una actividad disponible en la sucursal y el horario que le mencione el cliente de acuerdo a los que hay disponibles e inscribe la actividad.
+	}
+		\UCitem{Versión}{\color{Gray}0.2}
+		\UCitem{Autor}{\color{Gray}Daniel.}
+		\UCitem{Supervisa}{\color{Gray}Issac.}
+		\UCitem{Actor}{\hyperlink{Secretaria}{Secretaria}}
+		\UCitem{Propósito}{Que el cliente tenga acceso a la actividad que solicita.}
+		\UCitem{Entradas}{Correo de cliente, actividad, horario.}
+		\UCitem{Origen}{Teclado, lista desplegable.}
+		\UCitem{Salidas}{Actividad inscrita, horario inscrito.}
+		\UCitem{Destino}{Pantalla de la secretaria.}
+		\UCitem{Precondiciones}{Que la actividad ya este registrada, que el cliente tenga derecho a inscribir una actividad.}
+		\UCitem{Postcondiciones}{El cliente tendra la actividad inscrita, disminuira el cupo disponible a esa actividad.}
+		\UCitem{Errores}{Que no este registrado el correo, que y no haya cupo en la actividad.}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Inicia sesión (ver pantalla de login) y selecciona el botón de inscribir (Ver pantalla de inicio de sesión).
+		\UCpaso Muestra campos de correo electrónico, una lista desplegable con los horarios disponibles y una lista con las actividades registradas en la sucursal. (Ver pantalla).
+		\UCpaso[\UCactor] Llena el campo de correo con el correo proporcionado por el cliente y seleciona la actividad y el horario.
+		\UCpaso[\UCactor] presiona el botón de inscribir.
+		\UCpaso Valida que el correo este registrado, y que haya cupo en la actividad en el horario selecionado.			\UCpaso Muestra el mensae "Actividad inscrita".
+		\UCpaso Muestra la pantalla de inicio (Ver pantalla de inicio de sesión).
+	\end{UCtrayectoria}
+
+
+		
+		
+%-------------------------------------- TERMINA descripción del caso de uso.
+
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{CUX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU15}{Permitir acceso a la sucursal de los clientes}{
+		dejar ingresar a los clientes de la sucursal.
+	}
+		\UCitem{Versión}{\color{Gray}0.2}
+		\UCitem{Autor}{\color{Gray}Jazmin.}
+		\UCitem{Supervisa}{\color{Gray}Paco.}
+		\UCitem{Actor}{\hyperlink{Secretaria}{Secretaria}}
+		\UCitem{Propósito}{Para que los clientes con membresía o clientes que paguen
+		   su acceso puedan entrar a la sucursal y saber quien entra para entregar un reporte en caso de incidencias.}
+		\UCitem{Entradas}{Codigo QR, correo electrónico y nombre completo.}
+		\UCitem{Origen}{Teclado, lector de código QR.}
+		\UCitem{Salidas}{Nombre del cliente, correo electrónico, estado de pago de 
+		 membresía, fecha del próximo pago, fecha de pago anterior,
+		 monto a pagar y foto del cliente.}
+		\UCitem{Destino}{Pantalla de la secretaria.}
+		\UCitem{Precondiciones}{El cliente debe estar dado de alta ó tener por lo menos un pre-registro, la secretaria debe iniciar sesión.}
+		\UCitem{Postcondiciones}{}
+		\UCitem{Errores}{}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Inicia sesión (ver pantalla de login) y selecciona el botón de ingresos (Ver pantalla de inicio de sesión).  %\IUref{IU23}{Pantalla de Control de Acceso}\label{CU17Login}.
+		\UCpaso Muestra campos de correo electrónico y nombre (Ver pantalla).%\BRref{BR129}{Determinar si un Estudiante puede inscribir Seminario.} \Trayref{A}.
+		\UCpaso[\UCactor] Scanea el codigo QR que tiene la membresía.\Trayref{A}\label{CU15ValidarQR}.  %\IUref{IU32}{Pantalla de Selección de Seminario}
+		\UCpaso Valida que el codigo QR este registrado. 
+		\UCpaso Llena los campos de entrada.% \BRref{BR130}{Determinar si un Estudiante puede inscribirse en un Seminario} \Trayref{C}.
+		\UCpaso Muestra la pantalla con datos del nombre al que pertenece la membresía, el estado en el que se 
+				encuentra la membresía (vencido, por vencer y vigente), la fecha del proximo pago de la membresía, el monto a pagar y una foto del cliente\Trayref{C}\label{CU15RealizarPago}. %\BRref{BR143}{Validar el horario del estudiante} \Trayref{D}.		
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El cliente olvide su membresía}
+			\UCpaso[\UCactor] Captura el correo electrónico del cliente y su nombre completo.% {\bf MSG1-}``El Estudiante [{\em Número de Boleta}] aun no puede inscribirse al seminario.''.
+			\UCpaso[\UCactor] Confirma la operación oprimiendo el botón de buscar.% \IUbutton{Aceptar}.
+			\UCpaso Continua en el paso \ref{CU15ValidarQR} del \UCref{CU15}.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------
+		\begin{UCtrayectoriaA}{B}{El cliente tiene menos de una semana sin pagar}
+			\UCpaso Muestra mensaje de Realizar pronto pago, permitir entrada.
+			\UCpaso[\UCactor] Oprime el botón de aceptar.% \IUbutton{Salir}.
+			\UCpaso Muestra mensaje: ¿Quiere realizar el pago?.
+			\UCpaso[\UCactor] Toma una desición.
+			\UCpaso[] termina caso de uso.
+		\end{UCtrayectoriaA}
+
+%--------------------------------------
+		\begin{UCtrayectoriaA}{C}{El cliente tenga mas de una semana sin pagar}
+			\UCpaso Muestra mensaje de no permitir entrada.%{\bf MSG2-}``El Estudiante [{ Número de Boleta}] no cumple con los requisitos para inscribirse al Seminario [{\em Nombre del Seminario seleccionado}].''.
+			\UCpaso[\UCactor] Continua con el paso \ref{CU15RealizarPago} de la trayectoria B.
+		\end{UCtrayectoriaA}
+
+%--------------------------------------
+
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU17}{Consultar Datos de Instructor.}{
+			El recepcionista podrá acceder al sistema para corroborar el horario y clases que imparte 
+		un instructor en el gimnasio.}
+		\UCitem{Versión}{\color{Gray}0.4}
+		\UCitem{Autor}{\color{Gray}Andrés Isaac García Martínez}
+		\UCitem{Supervisa}{\color{Gray}Jazmín Camarillo Martínez}
+		\UCitem{Actor}{Recepcionista}
+		\UCitem{Propósito}{Que tanto el cliente como el instructor puedan ver los horarios y clases de los
+		instructores contratados en el gimnasio.}
+		\UCitem{Entradas}{Nombre, Apellido Paterno, Apellido Materno.}
+		\UCitem{Origen}{Teclado.}
+		\UCitem{Salidas}{Nombre completo del instructor, Edad, Clases que imparte, Horario, Imágen del instructor.}
+		\UCitem{Destino}{Pantalla del recepcionista.}
+		\UCitem{Precondiciones}{El recepcionista tiene que iniciar sesión.}
+		\UCitem{Postcondiciones}{-. }
+		\UCitem{Errores}{}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Recepcionista.}\label{CU1LoginJI}.
+		\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
+		\UCpaso Verifica que el nombre y contraseña para ingresar iniciar sesión se encuentren.
+		\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
+		\UCpaso Seleccciona Consultar Instructor.
+		\UCpaso Despliega la \IUref{IU17}{Pantalla de Consultar Instructor}
+		\UCpaso[\UCactor]Ingresa en el área de texto designada el nombre del instructor, así como los apellidos paterno y materno
+				en sus áreas de texto designadas.
+		\UCpaso Búsca coincidencias con los datos ingresados.
+		\UCpaso Despliega una pantalla con el nombre completo del instructor, Edad, Clases que imparte, horario y una foto del instructor.
+
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El usuario no existe}
+			\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG1-}``El empleado [{\em Nombre de sesión}] no existe.''.
+			\UCpaso[\UCactor] Introduce nombre usuario correcto.
+			\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------
+		\begin{UCtrayectoriaA}{B}{Contraseña incorrecta}
+			\UCpaso Muestra el Mensaje {\bf MSG1¿2-}``La contraseña no es correcta.''.
+			\UCpaso[\UCactor] Introduce la contraseña correcta.
+			\UCpaso[] Continua con el paso 3 del \UCref{CU1}.
+		\end{UCtrayectoriaA}
+
+
+%--------------------------------------		
+		
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU18}{Consultar Datos de Sucursal.}{
+			Que el recepcionista acceda para poder corroborar, e informar al cliente sobre horarios de atención, las distintas áreas con
+las que cuenta la sucursal así como datos generales de la sucursal}
+		\UCitem{Versión}{\color{Gray}0.4}
+		\UCitem{Autor}{\color{Gray}Andrés Isaac García Martínez}
+		\UCitem{Supervisa}{\color{Gray}Jazmín Camarillo Martínez}
+		\UCitem{Actor}{Recepcionista}
+		\UCitem{Propósito}{Que el recepcionista proporcione información correcta sobre la sucursal en cuestión.}
+		\UCitem{Entradas}{Ubicación de la sucursal.}
+		\UCitem{Origen}{Teclado.}
+		\UCitem{Salidas}{Ubicación exacta de la sucursal, horarios de atención, Áreas con las que cuenta, Actividades que se imparten}
+		\UCitem{Destino}{Pantalla del recepcionista.}
+		\UCitem{Precondiciones}{El recepcionista tiene que iniciar sesión.}
+		\UCitem{Postcondiciones}{-. }
+		\UCitem{Errores}{}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Recepcionista.}\label{CU1LoginJI}.
+		\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
+		\UCpaso Revisa que el nombre y contraseña son correctos para ingresar como usuario recepcionista.
+		\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
+		\UCpaso[\UCactor]Selecciona sucursales.
+		\UCpaso Despliega la \IUref{IU18}{Pantalla de Consultar Sucursal}
+		\UCpaso[\UCactor]Ingresa la dirección de la sucursal.
+		\UCpaso Busca coincidencias con los datos introducidos.
+		\UCpaso Despliega la pantalla con la ubicacion de la sucursal, horarios de atención, áreas y actividades.
+
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{Ubicación inexacta}
+			\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG1-}``La ubicación [{\em Ubicación}] no existe.''.
+			\UCpaso[\UCactor] Introduce la ubicación correcta.
+			\UCpaso[] Continua con el paso 8 del \UCref{CU18}.
+		\end{UCtrayectoriaA}
+		
+%--------------------------------------	
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU19}{Consultar Datos de Actividades.}{Acceder al sistema como usuario Recepcionista para 
+poder ver la información principal de cada una de las actividades que se imparten en la sucursal}
+		\UCitem{Versión}{\color{Gray}0.4}
+		\UCitem{Autor}{\color{Gray}Andrés Isaac García Martínez}
+		\UCitem{Supervisa}{\color{Gray}Jazmín Camarillo Martínez}
+		\UCitem{Actor}{Recepcionista}
+		\UCitem{Propósito}{Que el recepcionista pueda proporcionae la información referente a cada una 
+		de las actividades o clases que se dan en el gimnasio. .}
+		\UCitem{Entradas}{Nombre de la actividad.}
+		\UCitem{Origen}{Teclado.}
+		\UCitem{Salidas}{Nombre de la actividad, horarios en los que se imparte, área donde se imparte, Instructor que la imparte.}
+		\UCitem{Destino}{Pantalla del recepcionista.}
+		\UCitem{Precondiciones}{El recepcionista tiene que iniciar sesión.}
+		\UCitem{Postcondiciones}{-. }
+		\UCitem{Errores}{}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Recepcionista.}\label{CU1LoginJI}.
+		\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
+		\UCpaso Revisa que el nombre y contraseña son correctos para ingresar sesión como recepcionista.
+		\UCpaso Despliega la \IUref{IU2}{Pantalla inicio del jefe de inmobiliario}.
+		\UCpaso[\UCactor]Selecciona actividades.
+		\UCpaso Despliega la \IUref{IU19}{Pantalla de Consultar Actividades}
+		\UCpaso[\UCactor]Selecciona la actividad que desea consultar así como el día en el que se imparte.
+		\UCpaso Despliega la pantalla con el nombre de la actividad, horarios, días, área donde se imparte así como el instructor.
+
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{Actividad mal escrito.}
+			\UCpaso[\UCactor] Muestra el Mensaje {\bf MSG10-}``La actividad [{\em Nombre de Actividad}] no existe.''.
+			\UCpaso[\UCactor] Selecciona la actividad correcta..
+			\UCpaso[] Continua con el paso 5 del \UCref{CU19}.
+		\end{UCtrayectoriaA}
+			
+%--------------------------------------	
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU20}{Consultar Datos de Áreas.}{Apoyo para la recepción para proporcionar información a todo cliente que visite la sucursal.}
+		\UCitem{Versión}{\color{Gray}0.4}
+		\UCitem{Autor}{\color{Gray}Andrés Isaac García Martínez}
+		\UCitem{Supervisa}{\color{Gray}Jazmín Camarillo Martínez}
+		\UCitem{Actor}{Recepcionista}
+		\UCitem{Propósito}{Que el recepcionista pueda informar con mayor certeza al cliente sobre las áreas de la sucursal. }
+		\UCitem{Entradas}{Nombre del área.}
+		\UCitem{Origen}{Teclado.}
+		\UCitem{Salidas}{Nombre del área, capacidad mínima y máxima, Dimensiones.}
+		\UCitem{Destino}{Pantalla del recepcionista.}
+		\UCitem{Precondiciones}{El recepcionista tiene que iniciar sesión.}
+		\UCitem{Postcondiciones}{-. }
+		\UCitem{Errores}{}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Recepcionista.}\label{CU1LoginJI}.
+		\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
+		\UCpaso Revisa que el nombre y contraseña son correctos para ingresar sesión como recepcionista.
+		\UCpaso Despliega la \IUref{IU2}{Pantalla inicio de recepcionosta}.
+		\UCpaso[\UCactor]Selecciona actividades.
+		\UCpaso Despliega la \IUref{IU20}{Pantalla de Consultar Áreas}
+		\UCpaso[\UCactor]Selecciona el área que desea revisar.
+		\UCpaso Busca coincidencias con el nombre del área que se ingreso.
+		\UCpaso Despliega la pantalla con el Nombre del área, sus capacidades máxima y mínima.
+	\end{UCtrayectoria}
+		
+%--------------------------------------	
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU21}{Consultar Datos de Clientes.}{El recepcionista podrá acceder al sistema para poder corroborar los datos de los clientes.}
+		\UCitem{Versión}{\color{Gray}0.4}
+		\UCitem{Autor}{\color{Gray}Andrés Isaac García Martínez}
+		\UCitem{Supervisa}{\color{Gray}Jazmín Camarillo Martínez}
+		\UCitem{Actor}{Recepcionista}
+		\UCitem{Propósito}{Que el recepcionista pueda corrobar la información del cliente. }
+		\UCitem{Entradas}{Correo eletrcónico, Nombre(s), Apellido Paterno, Apellido Materno.}
+		\UCitem{Origen}{Teclado.}
+		\UCitem{Salidas}{Nombre completo del cliente, Edad, Peso, actividades en las que participa, Tipo de membresía, Fecha de inscripción.}
+		\UCitem{Destino}{Pantalla del recepcionista.}
+		\UCitem{Precondiciones}{El recepcionista tiene que iniciar sesión.}
+		\UCitem{Postcondiciones}{-. }
+		\UCitem{Errores}{}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Introduce su Nombre de usuario y su password para poder ingresar vía la  \IUref{IU1}{Pantalla de Inicio de Sesión del Recepcionista.}\label{CU1LoginJI}.
+		\UCpaso[\UCactor] Confirma la operación presionando el botón Iniciar Sesión.
+		\UCpaso Revisa que el nombre y contraseña son correctos para ingresar sesión como recepcionista.
+		\UCpaso Despliega la \IUref{IU2}{Pantalla inicio de recepcionosta}.
+		\UCpaso[\UCactor]Selecciona actividades.
+		\UCpaso Despliega la \IUref{IU21}{Pantalla para consultar datos de clientes.}
+		\UCpaso[\UCactor]Ingresa el correo electrónico del cliente.
+		\UCpaso Busca coincidencias con el correo que se ingreso.
+		\UCpaso Despliega la pantalla con el nombre completo del clinete, Edad, Peso, actividades en las que participa, Tipo de membresía y la Fecha de inscripción.
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El cliente no se acuerda de su correo electrónico.}
+			\UCpaso[\UCactor] Ingresa el nombre y apellidos del cliente.
+			\UCpaso Continua desde el paso 9.
+		\end{UCtrayectoriaA}
+		
+		
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU25}{Vender membresía}{
+		El personal de ventas buscara al cliente por medio de su correo electrónico, luego seleccionara el tipo de membresía que el cliente desea, posteriormente el sistema genera un recibo de la compra
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Francisco Gutierrez}
+		\UCitem{Supervisa}{\color{Gray}Daniel Valerdi}
+		\UCitem{Actor}{\hyperlink{Vendedor}{Vendedor}}
+		\UCitem{Propósito}{ Documentar la venta realizada al cliente para tener un registro de la transacción realizada y que el negocio obtenga ganancias}
+		\UCitem{Entradas}{Email}
+		\UCitem{Origen}{Teclado y Mouse}
+		\UCitem{Salidas}{Recibo}
+		\UCitem{Destino}{Impresora}
+		\UCitem{Precondiciones}{El cliente debe estar registrado}
+		\UCitem{Postcondiciones}{El archivo recibo sera guardado de forma local}
+		\UCitem{Errores}{El cliente no esta registrado, El correo electrónico del cliente esta mal escrito}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso El actor inicia sesión
+		\UCpaso El actor se desplaza al menú ventas
+		\UCpaso El actor selecciona venta
+		\UCpaso El sistema muestra la pantalla buscar cliente
+		\UCpaso El actor ingresa el correo electrónico del cliente en el campo de búsqueda 
+		\UCpaso El sistema muestra los resultados de la búsqueda
+		\UCpaso El actor selecciona el cliente que necesita y presiona el botón buscar
+		\UCpaso El sistema muestra la pantalla tipos de membresía, esta es un catalogo con los tipos de membresía disponibles
+		\UCpaso El actor selecciona el tipo de membresía deseado y presiona el botón continuar
+		\UCpaso El sistema muestra la pantalla confirmar venta
+		\UCpaso El actor presionar el botón confirmar
+		\UCpaso El sistema abre una nueva ventana en el navegador y muestra la pantalla recibo, este es una archivo pdf que es un plantilla del archivo recibo y contiene la información del cliente así como la información del tipo de producto vendido.
+		\UCpaso El actor imprime el recibo y guarda el archivo en su equipo
+		
+	\end{UCtrayectoria}
+		
+%-------------------------------------- TERMINA descripción del caso de uso.
+
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU26}{Usar servicio por hora}{
+		El personal de ventas proporcionará un ticket de pago para el ingreso a la sucursal por hora.
+	}
+	\UCitem{Versión}{\color{Gray}0.1}
+	\UCitem{Autor}{\color{Gray}Jazmin Camarillo Martinez}
+	\UCitem{Supervisa}{\color{Gray}}
+	\UCitem{Actor}{\hyperlink{Vendedor}{Vendedor}}
+	\UCitem{Propósito}{ Para identificar quien es cliente que utiliza las instalaciones por hora.}
+	\UCitem{Entradas}{Nombre del cliente completo, actividad, tiempo de estancia. }
+	\UCitem{Origen}{Teclado y Mouse}
+	\UCitem{Salidas}{Recibo}
+	\UCitem{Destino}{Impresora}
+	\UCitem{Precondiciones}{EL vendedor debe iniciar sesión.}
+	\UCitem{Postcondiciones}{El archivo recibo sera guardado de forma local}
+	\UCitem{Errores}{}
+	\UCitem{Observaciones}{Este caso de uso puede variar, por lo cual no esta definida su pantalla}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Principal}
+	\UCpaso Inicia sesión introduciendo sus datos via: Figura 7
+	\UCpaso[\UCactor] Valida que sea correcto los datos introducidos.
+	\UCpaso[\UCactor] Despliega la pantalla del vendedor.
+	\UCpaso Selecciona vender por hora en su menú.
+	\UCpaso[\UCactor] Muestra los datos de entrada.
+	\UCpaso Llena los campos.
+	\UCpaso[\UCactor] Verifica que la actividad seleccionada tenga cupo.
+	\UCpaso Confirma la operación oprimiendo el botón de imprimir.
+	\UCpaso[\UCactor] Manda a imprimir a la impresora el recibo.
+	\UCpaso Concluye la trayectoria oprimiendo el botón de aceptar.
+	
+\end{UCtrayectoria}
+
+\begin{UCtrayectoriaA}{A}{No haya cupo en Actividad}
+	\UCpaso Captura la actividad que el cliente quiere.
+	\UCpaso[\UCactor] Manda mensaje de sin cupo.
+	\UCpaso Confirma de enterado oprimiendo el botón de aceptar.
+	\end{UCtrayectoriaA}

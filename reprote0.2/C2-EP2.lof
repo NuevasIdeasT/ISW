@@ -5,24 +5,32 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Arquitectura del sistema.}}{7}{figure.2.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Modelo del dominio del problema parte 1}}{11}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Modelo del dominio del problema parte 1}}{12}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Mapa de procesos}}{18}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces PROCM-01 Nombre del proceso}}{19}{figure.3.4}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Modelo del dominio del problema parte 2}}{12}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Modelo del dominio del problema parte 3}}{13}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Modelo del dominio del problema parte 4}}{14}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Agregar Actividad a Sucursal}}{18}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ingreso a la sucursal}}{18}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Registrar cliente}}{19}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Reposicion de Tarjeta}}{19}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Vender Actividad}}{20}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Agregar Actividad a Invitado}}{21}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Vender Membres\IeC {\'\i }a}}{22}{figure.3.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama detallado del sistema parte 1.}}{22}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama detallado del sistema parte 1.}}{23}{figure.4.2}
-<<<<<<< HEAD
-\contentsline {figure}{\numberline {4.3}{\ignorespaces IU1 Pantalla de login del jefe de inmobiliario.}}{40}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces IU2 Pantalla de Inicio de Sesi\IeC {\'o}n del jefe de inmobiliario.}}{41}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces IU3 Pantalla de Actividades.}}{41}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces IU4 Pantalla de Editar Actividad.}}{42}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces IU5 Pantalla de Edici\IeC {\'o}n terminada.}}{42}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces IU6 Pantalla de Ver Actividad.}}{43}{figure.4.8}
-=======
-\contentsline {figure}{\numberline {4.3}{\ignorespaces IU1 Pantalla de login del jefe de inmobiliario.}}{36}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces IU2 Pantalla de Inicio de Sesi\IeC {\'o}n del jefe de inmobiliario.}}{36}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces IU3 Pantalla de Actividades.}}{37}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces IU4 Pantalla de Editar Actividad.}}{37}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces IU5 Pantalla de Edici\IeC {\'o}n terminada.}}{38}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces IU6 Pantalla de Ver Actividad.}}{38}{figure.4.8}
->>>>>>> 9f9a7873d393d15ef2e51ed82dfdb98c90dd4493
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama detallado del sistema parte 1.}}{24}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagrama detallado del sistema parte 2.}}{25}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama detallado del sistema parte 3.}}{26}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama detallado del sistema parte 4.}}{27}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama detallado del sistema parte 5.}}{28}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces IU1 Pantalla de login del jefe de inmobiliario.}}{77}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces IU2 Pantalla de Inicio de Sesi\IeC {\'o}n del jefe de inmobiliario.}}{77}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces IU3 Pantalla de Actividades.}}{78}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces IU4 Pantalla de Editar Actividad.}}{78}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces IU5 Pantalla de Edici\IeC {\'o}n terminada.}}{79}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces IU6 Pantalla de Ver Actividad.}}{79}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces IU22 Pantalla de Inicio de sesion del cliente.}}{80}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces IU23 Pantalla de Inicio del cliente.}}{80}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces IU35 Pantalla de Instructores.}}{81}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces IU351 Pantalla Nuevo Instructor.}}{81}{figure.4.15}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces IU352 Pantalla Editar Instructor.}}{82}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces IU22 Pantalla de Inicio de sesion del cliente.}}{82}{figure.4.17}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces IU23 Pantalla de Inicio del cliente.}}{83}{figure.4.18}
