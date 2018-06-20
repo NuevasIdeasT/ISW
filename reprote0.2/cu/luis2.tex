@@ -6,7 +6,11 @@
 
 %\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
 %--------------------------------------
+<<<<<<< HEAD
 \begin{UseCase}{CU34}{Registrar Instructor}{
+=======
+\begin{UseCase}{CU35}{Registrar Instructor}{
+>>>>>>> 4435e9eea844c41d312547d202b75a2558a68b41
 		Crear un nuevo instructor en el sistema introduciendo sus datos personales y asignándole al menos una actividad.
 	}
 	\UCitem{Versión}{\color{Gray}0.4}
@@ -77,6 +81,7 @@
 
 %--------------------------------------
 
+<<<<<<< HEAD
 %-------------------------------------- COMIENZA descripción del caso de uso.
 
 %\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
@@ -113,6 +118,8 @@
 
 %--------------------------------------
 
+=======
+>>>>>>> 4435e9eea844c41d312547d202b75a2558a68b41
 
 % Copie este bloque por cada caso de uso:
 %-------------------------------------- COMIENZA descripción del caso de uso.
@@ -275,6 +282,7 @@
 \end{UCtrayectoriaA}
 
 
+<<<<<<< HEAD
 % Copie este bloque por cada caso de uso
 
 %-------------------------------------- TERMINA descripción del caso de uso.
@@ -326,4 +334,47 @@
 
 % Copie este bloque por cada caso de uso:
 
+=======
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU39}{Listar Instructores}{
+		El sistema genera una lista de todos los instructores que se encuentran activos.
+	}
+	\UCitem{Versión}{\color{Gray}0.4}
+	\UCitem{Autor}{\color{Gray}Quiroz Olmedo Luis}
+	\UCitem{Supervisa}{\color{Gray}Francisco}
+	\UCitem{Actor}{Sistema}
+	\UCitem{Propósito}{Listar solo los Instructores que no se encuentran declarados con bandera de borrado y mostrarlos para su edición.}
+	\UCitem{Entradas}{}
+	\UCitem{Origen}{}
+	\UCitem{Salidas}{Lista de entidad Insctructor}
+	\UCitem{Destino}{Pantalla de Instructores}
+	\UCitem{Precondiciones}{• Que almenos exista un Instructor registrado}
+	\UCitem{Postcondiciones}{Se tendrá la lista de todos los Instructores registrados}
+	\UCitem{Errores}{•Todos los instructores se encuentran bloqueados o no hay instructores registrados.\textbf{Trayectoria Alternativa A}}
+	\UCitem{Tipo}{Caso de uso secundario}
+	\UCitem{Observaciones}{}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{El caso de uso inicia cuando se va a desplegar la pantalla \IUref{IU35}{Instructores}}
+	\UCpaso extrae todos los instructores que no cuentan con la bandera de borrado.
+	\UCpaso genera una lista de instructores con los instructores del paso [1].
+	\UCpaso muestra la pantalla  \IUref{IU35}{Instructores} con la lista del paso [2].
+\end{UCtrayectoria}
+
+%--------------------------------------		
+\begin{UCtrayectoriaA}{A}{Todos los instructores se encuentran bloqueados o no hay instructores registrados}
+	\UCpaso despliega en la pantalla \IUref{IU35}{Instructores} con el mensaje {\bf MSG13-} ''No hay instructores disponibles''.
+\end{UCtrayectoriaA}
+
+%--------------------------------------
+>>>>>>> 4435e9eea844c41d312547d202b75a2558a68b41
 
