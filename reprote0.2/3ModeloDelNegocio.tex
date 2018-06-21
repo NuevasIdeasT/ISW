@@ -267,7 +267,6 @@
 	\brRel{\brRelComposition}{Sucursal}{Un \hyperlink{Area}{Area} pertenece a una \hyperlink{Sucursal}{Sucursal}}	
 	\end{cdtEntidad}
 	
-<<<<<<< HEAD
 	%---------------------------------------------------------sa
 	
 	
@@ -330,45 +329,4 @@
 
 
 
-=======
-%---------------------------------------------------------
-%---------------------------------------------------------
->>>>>>> 4435e9eea844c41d312547d202b75a2558a68b41
 
-\begin{cdtEntidad}{Invitado}{Invitado}
-	\brAttr{ID}{Invitado}{Id}{Número de registro para identificar un Invitado.}{Sí}
-	\brAttr{Nombre}{Nombre}{Nombre corto}
-	{Nombre del Invitado.}{Sí}
-	\brAttr{Telefono}{Telefono}{Entero Largo}
-	{Numero Telefonico del Invitado.}{Sí}
-	\brAttr{ID}{Sucursal}{ID}{Numero de registro para identificar a la sucursal a la cual entrara el invitado}{SI}
-	\brAttr{Email}{Email}{Correo}
-	{Email del Inviado.}{Sí}
-	\cdtEntityRelSection
-	\brRel{\brRelAgregation}{Horario}{Un \hyperlink{Invitado}{Invitado} tiene una cortesia con un \hyperlink{Horario}{Horario} asignado.}
-	\brRel{\brRelAgregation}{Dia}{Un \hyperlink{Invitado}{Invitado} tiene una cortesia con un \hyperlink{Dia}{Dia} asignado.}
-	\brRel{\brRelAgregation}{Actividad}{Un \hyperlink{Invitado}{Invitado} tiene una cortesia con un \hyperlink{Actividad}{Actividad} asignada.}		
-	\brRel{\brRelComposition}{Sucursal}{Un \hyperlink{Invitado}{Invitado} Tiene una \hyperlink{Sucursal}{Sucursal} asignada.}	
-	\end{cdtEntidad}
-	
-%---------------------------------------------------------
-\begin{cdtEntidad}{Horario}{Horario}
-	\brAttr{ID}{Horario}{Id}{Número de registro para identificar un Horario.}{Sí}
-	\brAttr{Descripción}{Descripción}{Nombre Largo}
-	{Descripción del Horario.}{Sí}
-	\cdtEntityRelSection
-	\brRel{\brRelAgregation}{Actividad}{Un \hyperlink{Horario}{Horario} tiene varias \hyperlink{Actividad}{Actividad} asignadas.}
-	\brRel{\brRelAgregation}{Dia}{Un \hyperlink{Horario}{Horario} tiene varios \hyperlink{Dia}{Dia} asignados.}	
-	\end{cdtEntidad}
-%---------------------------------------------------------
-%---------------------------------------------------------
-\begin{cdtEntidad}{Disciplina}{Disciplina}
-	\brAttr{ID}{Disciplina}{Id}{Número de registro para identificar una Disciplina.}{Sí}
-	\brAttr{Nombre}{Nombre}{Nombre Largo}
-	{Nombre de la Disciplina.}{Sí}
-	\brAttr{Descripción}{Descripción}{Nombre Largo}
-	{Descripción de la Disciplina.}{Sí}
-	\cdtEntityRelSection
-	\brRel{\brRelAgregation}{Instructor}{Una \hyperlink{Disciplina}{Disciplina} tiene varios  \hyperlink{Instructor}{Instructor}.}
-	\end{cdtEntidad}
-%---------------------------------------------------------
